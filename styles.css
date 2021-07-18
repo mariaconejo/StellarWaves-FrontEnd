@@ -8,8 +8,8 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: #11848A; /* Fallback color */
-    background-color: #11848A; /* Black w/ opacity */
+    background-color: #010607; /* Fallback color */
+    background-color: #09171881; /* Black w/ opacity */
 }
 
 .modal__content h2{
@@ -27,7 +27,7 @@
   font-size: 22px;
   height: 55px;
   width: 585px;
-  border-radius: 7px;
+  border-radius: 38px;
 }
 
 .modal__content select{
@@ -35,7 +35,7 @@
   font-size: 22px;
   height: 55px;
   width: 585px;
-  border-radius: 7px;
+  border-radius: 38px;
 }
 
   /* Modal Content/Box */
@@ -65,3 +65,14 @@
 
 /*general styles*/
 
+#btn__savePlaylist{
+  background-color: #11848A;
+  border: 2px solid #F7F1DE;
+  border-radius: 40px;
+  box-shadow: 5px 5px #01060742;
+  color:#F7F1DE;
+  height: 40px;
+  margin-left: 425px;
+  margin-top: 25px;
+  width: 160px;
+}
