@@ -34,6 +34,11 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-watch": "^7.0.0",
     "live-server": "^1.2.1",
-    "livereload": "^0.9.3"
+    "livereload": "^0.9.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.9"
   }
 }

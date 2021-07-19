@@ -13,6 +13,18 @@ ul{
 
 }
 
+h1{
+    font-size: 36px;
+    color: #fff;
+    font-family: 'Righteous', cursive;
+
+}
+
+h3{
+    font-size: 28;
+    color: #fff;
+    font-family: 'Righteous', cursive;
+}
 
 .wrapper{
     width: 1170px;
@@ -216,3 +228,178 @@ path:hover{
 .button__background:focus{
     fill: #E6E6E6;
 }
+
+
+
+
+.container__recent--song{
+    width: 387px;
+    height: 494px;
+    background: rgba(17, 157, 164, 0.45);
+    border-radius: 29px;
+    float: right;
+    margin-left: 249px;
+    margin-top: 75px;
+}
+
+.recent__song--info{
+    text-align: center;
+}
+
+.music__img img{
+    width: 58%;
+}
+
+.recent__song--paragraph{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.artist__container{
+    margin-left: 23px;
+    margin-top: 243px;
+    border: blueviolet 3px solid;
+    width: 500px;
+    height: 127px;
+    float: left;
+}
+
+.artist__name--container{
+    margin-top: 78px;
+    height: 551px;
+    width: 277px;
+    background: #1F2041;
+    float:left;
+}
+
+.home-content-1__p{
+    color: #fff;
+}
+
+
+.info{
+    margin-bottom: 10px;
+    margin-top: 80px;
+    width: 873px;
+    height: 243px;
+    background: rgba(247, 241, 222, 0.56);
+    border-radius: 6px;
+    float: left;
+}
+
+.songs{
+    width: 873px;
+    height: 298px;
+    background: rgba(247, 241, 222, 0.56);
+    border-radius: 6px;
+    float: left;
+}
+
+
+.artist__img--cover, .album__img{
+    width: 25%;
+}
+
+.info, .songs{
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.info__artist, .songs__container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* Estado (clases asignadas por Javascript) */
+
+.js-active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    color: #000;
+}
+
+.js-content-hidden {
+    display: none;
+}
+
+/* The Modal (background) */
+.modal__Songs {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #010607; /* Fallback color */
+    background-color: #09171881; /* Black w/ opacity */
+}
+
+.modal__content h2{
+  font-size: 36px;
+  text-align: left;
+}
+
+.modal__content label{
+  color: #E6E6E6;
+  font-size: 22px;
+}
+
+.modal__content input{
+  color: #9B9B9B;
+  font-size: 22px;
+  height: 55px;
+  width: 585px;
+  border-radius: 38px;
+}
+
+.modal__content select{
+  color: #9B9B9B;
+  font-size: 22px;
+  height: 55px;
+  width: 585px;
+  border-radius: 38px;
+}
+
+  /* Modal Content/Box */
+.modal__content {
+    background-color: #11848A;
+    border: 2px solid #F7F1DE;
+    height: 350px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 625px; /* Could be more or less, depending on screen size */
+}
+
+  /* The Close Button */
+.close {
+    color: #F7F1DE;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*general styles*/
+
+#btn__savePlaylist{
+  background-color: #11848A;
+  border: 2px solid #F7F1DE;
+  border-radius: 40px;
+  box-shadow: 5px 5px #01060742;
+  color:#F7F1DE;
+  height: 40px;
+  margin-left: 425px;
+  margin-top: 25px;
+  width: 160px;
+}
+

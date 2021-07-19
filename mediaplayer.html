@@ -35,12 +35,28 @@
                     <div class="mediaplayer__canva">
                         <div class="wrapper__mediaplayer">
                             <audio id="audioElement" crossOrigin="anonymous"></audio>
-                            <canvas id="wave" width="900" height="100"></canvas>
+                            <canvas id="canvas" width="882" height="142"></canvas>
                         </div>
                     </div>
                     <div class="mediaplayer__controls">
                         <div class="wrapper__mediaplayer">
+                            <div class="modal__Songs" id="modal__Songs">
+                                <!-- Modal content -->
+                                    <div class="modal__content" id="modal__addSong">
+                                        <span class="close">&times;</span>
+                                        <h2>Add to a list</h2>
+                                        <label>New playlist</label>
+                                        <input type="text" placeholder="New playlist">
+                                        <input type="submit" value="Save" id="btn__savePlaylist">
+                                    </div>
+                            </div>
                             <div class="mediaplayer__buttons--control controls">
+                                <label>Existing playlist</label>
+                                <select name="Existing playlist" id="existing__playlist">
+                                    <option value="Playlist 1">Playlist 1</option>
+                                    <option value="Playlist 2">Playlist 2</option>
+                                    <option value="Playlist 3">Playlist 3</option>
+                                </select>
                                 <button class="button__background" aria-labelledby="button-label">
                                     <span id="button-label" hidden>Add Song</span>
                                     <svg class="button__active"  aria-hidden="true" focusable="false" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,5 +110,5 @@
             </div>
         </div>
     </body>
-    <script src="./js/canvas.js"></script>
+    <script src="./js/modal.js"></script>
 </html>
