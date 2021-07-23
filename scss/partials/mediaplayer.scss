@@ -1,0 +1,59 @@
+.mediaplayer__song--name{
+  background-color: #232323;
+  height: 30px;
+  margin-top: 130px;
+}
+
+.mediaplayer__song--name p{
+  color: #fff;
+  font-family: 'Righteous', cursive;
+  font-size: 24px;
+}
+
+.mediaplayer__canva{
+  background-color: #1F2041;
+  height: 200px;
+}
+
+.mediaplayer__controls{
+  background: rgba(34, 30, 85, 0.77);
+  height: 140px;
+}
+
+
+.button__background{
+  background: transparent;
+  border: none;
+
+}
+
+.mediaplayer__buttons--control{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+
+
+path:hover{
+  fill: #E6E6E6
+}
+
+.paragraph__button--control{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #FFE4AD;
+}
+
+.button__background{
+  cursor: pointer;
+}
+.button__background:active{
+  fill: #E6E6E6;
+}
+.button__background:focus{
+  fill: #E6E6E6;
+}
+
+

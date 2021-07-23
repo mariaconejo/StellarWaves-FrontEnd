@@ -1,0 +1,91 @@
+.container__recent--song{
+  width: 387px;
+  height: 494px;
+  background: rgba(17, 157, 164, 0.45);
+  border-radius: 29px;
+  float: right;
+  margin-left: 249px;
+  margin-top: 75px;
+}
+
+.recent__song--info{
+  text-align: center;
+}
+
+.music__img img{
+  width: 58%;
+}
+
+.recent__song--paragraph{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+.artist__container{
+  margin-left: 23px;
+  margin-top: 243px;
+  border: blueviolet 3px solid;
+  width: 500px;
+  height: 127px;
+  float: left;
+}
+
+.artist__name--container{
+  margin-top: 78px;
+  height: 551px;
+  width: 277px;
+  background: #1F2041;
+  float:left;
+}
+
+.home-content-1__p{
+  color: #fff;
+}
+
+
+.info{
+  margin-bottom: 10px;
+  margin-top: 80px;
+  width: 873px;
+  height: 243px;
+  background: rgba(247, 241, 222, 0.56);
+  border-radius: 6px;
+  float: left;
+}
+
+.songs{
+  width: 873px;
+  height: 298px;
+  background: rgba(247, 241, 222, 0.56);
+  border-radius: 6px;
+  float: left;
+}
+
+
+.artist__img--cover, .album__img{
+  width: 25%;
+}
+
+.info, .songs{
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.info__artist, .songs__container{
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* Estado (clases asignadas por Javascript) */
+
+.js-active {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  color: #000;
+}
+
+.js-content-hidden {
+  display: none;
+}

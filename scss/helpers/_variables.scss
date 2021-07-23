@@ -6,6 +6,7 @@ $dark-blue-green: #1E7B99;
 $blue-green: #119DA4;
 $ligth-yellow:#FFE4AD;
 $bones-white:#F7F1DE;
+$background:#000027;
 
 // Escala de grises
 
@@ -15,8 +16,22 @@ $medium-gray: #9B9B9B;
 $ligth-gray: #E6E6E6;
 $white: #fff;
 
+// Transparencias
+
+$transparencias: rgba(230, 230, 230, 0.24);
+
+// Sombras
+
+$sombras: inset 3px 4px 4px rgba(0, 0, 0, 0.25);
+
+
 // Fonts
 
 $title-font: 'Righteous', cursive;
 $paragraph-font: 'Poppins', sans-serif;
+
+$font-size-title: 36px;
+$font-size-sub-title:30px;
+$font-size-subtitle-2:28px;
+
 
