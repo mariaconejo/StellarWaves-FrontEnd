@@ -152,7 +152,7 @@ li + li::after{
     display: block;
     margin-left: 113px;
     padding: 0 10px;
-    
+
 }
 
 .menu__list li a:hover{
@@ -197,7 +197,7 @@ li + li::after{
 .button__background{
     background: transparent;
     border: none;
-    
+
 }
 
 .mediaplayer__buttons--control{
@@ -326,13 +326,13 @@ path:hover{
 
 /* The Modal (background) */
 .modal__Songs {
-    display: none; /* Hidden by default */
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%;
+    height: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: #010607; /* Fallback color */
     background-color: #09171881; /* Black w/ opacity */
@@ -369,9 +369,9 @@ path:hover{
     background-color: #11848A;
     border: 2px solid #F7F1DE;
     height: 350px;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
-    width: 625px; /* Could be more or less, depending on screen size */
+    width: 625px;
 }
 
   /* The Close Button */
@@ -403,3 +403,10 @@ path:hover{
   width: 160px;
 }
 
+/* marquee text*/
+.marquee__text--content{
+  background-color: rgba(0, 0, 0, 0.267);
+  color: #fff;
+  font-family: 'Righteous', cursive;;
+  font-size: 24px;
+}
