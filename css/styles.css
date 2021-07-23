@@ -407,6 +407,75 @@ path:hover{
 .marquee__text--content{
   background-color: rgba(0, 0, 0, 0.267);
   color: #fff;
-  font-family: 'Righteous', cursive;;
+  font-family: 'Righteous', cursive;
   font-size: 24px;
 }
+
+/* profile tab -- playlists*/
+
+.user__container--info{
+  margin-top: 78px;
+  height: 551px;
+  width: 277px;
+  background: #1F2041;
+  float:left;
+}
+
+.user{
+  color: #F7F1DE;
+  font-size: 30px;
+  font-family: 'Righteous', cursive;
+  text-decoration: none;
+}
+
+.user{
+  margin-left: 35px;
+  margin-top:77px;
+}
+
+.edit__button{
+  float:left;
+}
+
+.default__playlist ul{
+  list-style: none;
+  margin-left: 35px
+}
+
+.default__playlist a{
+  color: #F7F1DE;
+  font-family: 'Righteous', cursive;
+  font-size: 23px;
+  text-decoration: none;
+}
+.default__playlist a{
+  margin-top:77px;
+}
+.default__playlist li{
+  margin-bottom:20px;
+}
+
+hr{
+  color: #F7F1DE;
+  text-align: center;
+  width:200px;
+}
+
+.playlist__name--list{
+  list-style: none;
+}
+.playlist__name--list a {
+  color: #F7F1DE;
+  font-family: 'Righteous', cursive;
+  font-size: 23px;
+  margin-left: 35px;
+  text-decoration: none;
+}
+
+.songs__container h1{
+  color: #F7F1DE;
+  font-family: 'Righteous', cursive;
+  font-size: 23px;
+
+}
+
