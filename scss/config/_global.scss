@@ -1,0 +1,56 @@
+body{
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 36px;
+  color: #fff;
+  font-family: $title-font;
+
+}
+
+
+h2{
+  color: #fff;
+  font-family:  $title-font;
+  font-size: 30px;
+}
+
+h3{
+  font-size: 28;
+  color: #fff;
+  font-family: $title-font;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+
+}
+
+.clearfix{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.wrapper{
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.wrapper__mediaplayer{
+  width: 1009px;
+  margin: 0 auto;
+}
+
+.wrapper__out{
+  background: $transparencias;
+  box-shadow: $sombras;
+}
+

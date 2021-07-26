@@ -1,0 +1,39 @@
+{
+  "name": "stellaswaves",
+  "version": "1.0.0",
+  "description": "Proyecto final node.js y javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+    "sass-build": "node-sass sass -o public/css --output-style compressed",
+    "dev-server": "live-server --watch=\"index.html,sass,js\"",
+    "eslint": "eslint js",
+    "dev": "concurrently \"npm run sass-build\" \"npm run scss\" \"npm run dev-server\" \"esw -w js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariaconejo/StellarWaves-FrontEnd.git"
+  },
+  "keywords": [
+    "mediaPlayer"
+  ],
+  "author": "Jeareth Venegas Y Maria Conejo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariaconejo/StellarWaves-FrontEnd/issues"
+  },
+  "homepage": "https://github.com/mariaconejo/StellarWaves-FrontEnd#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-watch": "^7.0.0",
+    "live-server": "^1.2.1",
+    "livereload": "^0.9.3"
+  }
+}

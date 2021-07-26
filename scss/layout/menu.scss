@@ -1,0 +1,29 @@
+.menu ul{
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  padding-top: 34px;
+}
+
+
+.menu__list li a{
+  color: #fff;
+  font-family: 'Righteous', cursive;
+  font-size: 36px;
+  text-decoration: none;
+  display: block;
+  margin-left: 113px;
+  padding: 0 10px;
+
+}
+
+.menu__list li a:hover{
+  background-color: #FFE4AD;
+  color: #4B3F72;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
+.logo_img{
+  float: left;
+}
