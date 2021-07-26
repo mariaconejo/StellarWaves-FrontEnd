@@ -1,23 +1,18 @@
-// Get the modal
-let modal = document.getElementById("modal__Songs");
+const modal = document.getElementById('modal__Songs');
+const btnAddSong = document.querySelector('.button__background');
+const close = document.getElementById('close');
+const flex = document.getElementById('flex');
 
-// Get the button that opens the modal
-var btn = document.getElementById("btn__addSong");
+btnAddSong.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
 
-// Get the <span> element that closes the modal
-var span = document.getElementById("close")[0];
+close.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
 
-// When the user clicks on the button, open the modal
-btn__addSong.onclick = function() {
-    modal__Songs.style.display = "block";
-}
-
-span.onclick = function() {
-    modal__Songs.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal__Songs.style.display = "none";
-    }
-}
+window.addEventListener('click', (e) => {
+  if (e.target === flex) {
+    modal.style.display = 'none';
+  }
+});

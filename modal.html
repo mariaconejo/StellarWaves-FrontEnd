@@ -17,17 +17,19 @@
         <div class="modal__Songs" id="modal__Songs" >
         <!-- Modal content -->
             <div class="modal__content" id="modal__addSong">
-                <span id="close">&times;</span>
-                <h2>Add to a list</h2>
-                <label>New playlist</label>
-                <input type="text" placeholder="New playlist">
-                <label>Existing playlist</label>
-                <select name="Existing playlist" id="existing__playlist">
-                    <option value="Playlist 1">Playlist 1</option>
-                    <option value="Playlist 2">Playlist 2</option>
-                    <option value="Playlist 3">Playlist 3</option>
-                </select>
-                <input type="submit" value="Save" id="btn__savePlaylist">
+                <div id="flex">
+                    <span id="close" class="close">&times;</span>
+                    <h2>Add to a list</h2>
+                    <label>New playlist</label>
+                    <input type="text" placeholder="New playlist">
+                    <label>Existing playlist</label>
+                    <select name="Existing playlist" id="existing__playlist">
+                        <option value="Playlist 1">Playlist 1</option>
+                        <option value="Playlist 2">Playlist 2</option>
+                        <option value="Playlist 3">Playlist 3</option>
+                    </select>
+                    <input type="submit" value="Save" id="btn__savePlaylist">
+                </div>
             </div>
         </div>
         <script src="js/modal.js"></script>
