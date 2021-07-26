@@ -1,55 +1,58 @@
 .modal__Songs {
+  font-family: $title-font;
   display: none; /* Hidden by default */
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #010607; /* Fallback color */
-  background-color: #09171881; /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $black;
+  background-color: #09171881;
 }
 
 .modal__content h2{
-font-size: 36px;
-text-align: left;
+  color: $white;
+  font-size: 36px;
+  text-align: left;
 }
 
 .modal__content label{
-color: #E6E6E6;
-font-size: 22px;
+  color: $ligth-gray;
+  font-size: 22px;
 }
 
 .modal__content input{
-color: #9B9B9B;
-font-size: 22px;
-height: 55px;
-width: 585px;
-border-radius: 38px;
+  color: $medium-gray;
+  font-size: 22px;
+  height: 55px;
+  width: 585px;
+  border-radius: 38px;
 }
 
 .modal__content select{
-color: #9B9B9B;
-font-size: 22px;
-height: 55px;
-width: 585px;
-border-radius: 38px;
+  color: $medium-gray;
+  font-size: 22px;
+  height: 55px;
+  width: 585px;
+  border-radius: 38px;
 }
 
 /* Modal Content/Box */
 .modal__content {
-  background-color: #11848A;
-  border: 2px solid #F7F1DE;
+  background-color: $dark-blue-green;
+  border: 2px solid $ligth-yellow;
   height: 350px;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
+  border-radius: 20px;
   padding: 20px;
-  width: 625px; /* Could be more or less, depending on screen size */
+  width: 625px;
 }
 
 /* The Close Button */
-.close {
-  color: #F7F1DE;
+#close {
+  color: $ligth-yellow;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -65,13 +68,13 @@ border-radius: 38px;
 /*general styles*/
 
 #btn__savePlaylist{
-background-color: #11848A;
-border: 2px solid #F7F1DE;
-border-radius: 40px;
-box-shadow: 5px 5px #01060742;
-color:#F7F1DE;
-height: 40px;
-margin-left: 425px;
-margin-top: 25px;
-width: 160px;
+  background-color: $dark-blue-green;
+  border: 2px solid $ligth-yellow;
+  border-radius: 40px;
+  box-shadow: 5px 5px #01060742;
+  color:$ligth-yellow;
+  height: 40px;
+  margin-left: 425px;
+  margin-top: 25px;
+  width: 160px;
 }
