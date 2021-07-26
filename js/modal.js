@@ -1,19 +1,17 @@
-const modal = document.getElementById('modal__Songs');
+let modal = document.getElementById("modal__Songs");
+let btnAddSong = document.getElementById("btn__addSong");
+let close = document.getElementById("close");
 
-const btn = document.querySelector('.button__background');
+btnAddSong.addEventListener('click', () => {
+    modal.style.display = "block";
+});
 
-const span = document.getElementsByClassName('close')[0];
+close.addEventListener('click', () => {
+    modal.style.display = "none";
+});
 
-btn.onclick = function () {
-  modal.style.display = 'block';
-};
-
-span.onclick = function () {
-  modal.style.display = 'none';
-};
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-};
+window.addEventListener('click', (e) => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+});
