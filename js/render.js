@@ -17,7 +17,7 @@ class ArtistView {
             enlaceName.setAttribute('href', `#${this.data[i].id}`)
             enlaceName.setAttribute('class', `artist-links`)
             li.appendChild(enlaceName);
-            
+
 
             const nameArtist = document.createElement('h3');
             nameArtist.setAttribute('class', 'artist__name--h3');
@@ -65,10 +65,7 @@ class ArtistView {
             divInfo.appendChild(paragraph)
             paragraph.innerHTML = `${this.data[i].album}`
         }
-
     }
-
-    
 }
 
 
@@ -103,3 +100,5 @@ class ArtistsSongs{
 }
 
 export {ArtistView,  ArtistsSongs}
+
+
