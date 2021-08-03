@@ -31,11 +31,9 @@
                         <p>You are listening to: Name</p>
                     </div>
                 </div>
-                <section>
                     <div class="mediaplayer__canva">
+                      <canvas></canvas>
                         <div class="wrapper__mediaplayer">
-                            <audio id="audioElement" crossOrigin="anonymous"></audio>
-                            <canvas id="wave" width="900" height="100"></canvas>
                         </div>
                     </div>
                     <div class="mediaplayer__controls">
@@ -51,6 +49,7 @@
                                     </div>
                             </div>
                             <div class="mediaplayer__buttons--control controls">
+                                <audio src="https://cetav.s3.us-east-2.amazonaws.com/runaway.mp3" crossorigin="anonymous" id="audio"></audio>
                                 <label>Existing playlist</label>
                                 <select name="Existing playlist" id="existing__playlist">
                                     <option value="Playlist 1">Playlist 1</option>
@@ -68,21 +67,21 @@
                                     </svg>
                                     <p class="paragraph__button--control">Add Song</p>
                                 </button>
-                                <button class="button__background" aria-labelledby="button-label">
+                                <button id="btn-prev"  class="button__background" aria-labelledby="button-label">
                                     <span id="button-label" hidden>Add Song</span>
                                     <svg class="button__active"  aria-hidden="true" focusable="false" width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M38.0759 21.3864C40.5869 14.2682 50.6536 14.2682 53.1646 21.3864L54.6196 25.5111C55.7238 28.6412 58.6461 30.7644 61.9642 30.8473L66.3367 30.9565C73.8824 31.145 76.9932 40.7189 70.9993 45.3067L67.5261 47.9651C64.8905 49.9825 63.7742 53.4179 64.7208 56.5992L65.9681 60.7914C68.1205 68.0261 59.9765 73.9431 53.7611 69.6603L50.1594 67.1786C47.4263 65.2953 43.8142 65.2953 41.0811 67.1786L37.4794 69.6603C31.264 73.9431 23.12 68.0261 25.2725 60.7914L26.5197 56.5992C27.4663 53.4179 26.35 49.9825 23.7144 47.9651L20.2412 45.3067C14.2473 40.7189 17.3581 31.145 24.9038 30.9565L29.2763 30.8473C32.5944 30.7644 35.5167 28.6412 36.6209 25.5111L38.0759 21.3864Z" fill="#FFE4AD"/>
                                         <path d="M35.291 36.1519C35.291 35.2012 36.0618 34.4304 37.0125 34.4304V34.4304C37.9633 34.4304 38.7341 35.2012 38.7341 36.1519V53.3671C38.7341 54.3179 37.9633 55.0886 37.0125 55.0886V55.0886C36.0618 55.0886 35.291 54.3179 35.291 53.3671V36.1519ZM44.7884 42.3086C43.0952 43.5039 43.0952 46.0152 44.7884 47.2104L51.2192 51.7498C53.2064 53.1525 55.9492 51.7313 55.9492 49.2989V40.2202C55.9492 37.7877 53.2064 36.3665 51.2192 37.7693L44.7884 42.3086Z" fill="#119DA4"/>
                                     </svg>
                                 </button>
-                                <button class="button__background btn-play" aria-labelledby="button-label">
+                                <button id="btn-start"  class="button__background btn-play" aria-labelledby="button-label">
                                     <span id="button-label" hidden>Add Song</span>
                                     <svg class="button__active"  aria-hidden="true" focusable="false" width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M38.3288 21.3864C40.8399 14.2682 50.9065 14.2682 53.4175 21.3864L54.8726 25.5111C55.9768 28.6412 58.899 30.7644 62.2171 30.8473L66.5896 30.9565C74.1354 31.145 77.2461 40.7189 71.2523 45.3067L67.7791 47.9651C65.1434 49.9825 64.0272 53.4179 64.9737 56.5992L66.221 60.7914C68.3735 68.0261 60.2294 73.9431 54.014 69.6603L50.4124 67.1786C47.6793 65.2953 44.0671 65.2953 41.334 67.1786L37.7324 69.6603C31.517 73.9431 23.3729 68.0261 25.5254 60.7914L26.7727 56.5992C27.7192 53.4179 26.603 49.9825 23.9673 47.9651L20.4941 45.3067C14.5003 40.7189 17.611 31.145 25.1568 30.9565L29.5292 30.8473C32.8473 30.7644 35.7696 28.6412 36.8738 25.5111L38.3288 21.3864Z" fill="#FFE4AD"/>
                                         <path d="M43.6025 34.7967C41.6055 33.5209 38.9873 34.9551 38.9873 37.3248V52.7681C38.9873 55.1378 41.6055 56.572 43.6025 55.2962L55.6885 47.5745C57.535 46.3949 57.535 43.698 55.6885 42.5184L43.6025 34.7967Z" fill="#119DA4"/>
                                     </svg>
                                 </button>
-                                <button class="button__background btn-pause" aria-labelledby="button-label">
+                                <button id="btn-stop" class="button__background btn-pause" aria-labelledby="button-label">
                                     <span id="button-label" hidden>Add Song</span>
                                     <svg class="button__active"  aria-hidden="true" focusable="false" width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M38.5818 21.3864C41.0928 14.2682 51.1594 14.2682 53.6705 21.3864L55.1255 25.5111C56.2297 28.6412 59.152 30.7644 62.4701 30.8473L66.8426 30.9565C74.3883 31.145 77.499 40.7189 71.5052 45.3067L68.032 47.9651C65.3963 49.9825 64.2801 53.4179 65.2266 56.5992L66.4739 60.7914C68.6264 68.0261 60.4823 73.9431 54.2669 69.6603L50.6653 67.1786C47.9322 65.2953 44.32 65.2953 41.5869 67.1786L37.9853 69.6603C31.7699 73.9431 23.6258 68.0261 25.7783 60.7914L27.0256 56.5992C27.9721 53.4179 26.8559 49.9825 24.2202 47.9651L20.747 45.3067C14.7532 40.7189 17.8639 31.145 25.4097 30.9565L29.7822 30.8473C33.1003 30.7644 36.0225 28.6412 37.1267 25.5111L38.5818 21.3864Z" fill="#FFE4AD"/>
@@ -112,4 +111,5 @@
     </body>
     <script src="./js/modal.js"></script>
     <script src="./js/canvas.js"></script>
+    <script src="mediaplayer.js" type="module"></script>
 </html>

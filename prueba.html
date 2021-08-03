@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id=" id"></canvas>
+    <script>
+                 var parameter = {
+                         Loading the artboard: function (can) {
+                    var canvas = document.getElementById(can);
+                    canvas.width = document.body.offsetWidth;
+                    canvas.height = document.body.offsetHeight;
+                    canvas.style.backgroundColor = "rgb(255, 255, 255)";
+                    return canvas;
+                },
+                                 Two D configuration: function (canvas) {
+                    var cvs = canvas.getContext('2d');
+                    return cvs;
+                },
+                                 Star configuration: function () {
+                                         var star chart = drawing. stars("","","");
+                    var image = new Image();
+                                         image.src = star map;
+                    return image;
+                },
+                                 Background star map: function (drawing board return, star, size) {
+                                         var x = artboard return.width,
+                                                 y = artboard return.height,
+                        rgba;
+                                         var eko = spare drawing board (x, y);
+                    var context = eko[1],
+                        canvas = eko[0];
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    for (var i = 0; i < size; i++) {
+                        var moadl = Math.random() * 9;
+                                                 context.drawImage(stars, Math.random() * x, Math.random() * y, moadl, moadl);
+                    }
+                    canvas.parentNode.removeChild(canvas);
+                    var image = new Image();
+                    image.src = canvas.toDataURL("image/png");
+                    return image;
+                },
+				 Text: function(){
+					 var eko = spare drawing board (500, 500);
+
+				}
+        }
+                 var drawing = {
+                         Stars: function (x, y, rgba) {
+                                 var eko = spare drawing board (x, y);
+                var context = eko[1],
+                    civ = eko[0];
+                context.clearRect(0, 0, civ.width, civ.height);
+                var grd = context.createRadialGradient(civ.width / 2, civ.height / 2, 1, civ.width / 2, civ.height / 2, civ.width / 2);
+                grd.addColorStop(0, 'rgba(231,223,174,0.5)');
+                grd.addColorStop(1, 'rgba(231,223,174,0)');
+                context.fillStyle = grd;
+                context.fillRect(0, 0, civ.width, civ.height);
+                context.moveTo(cos(0)[0], cos(0)[1]);
+                context.lineTo(sin(0.78539815)[0], sin(0.78539815)[1]);
+                context.lineTo(cos(1.5707963)[0], cos(1.5707963)[1]);
+                context.lineTo(sin(2.35619445)[0], sin(2.35619445)[1]);
+                context.lineTo(cos(3.1415926)[0], cos(3.1415926)[1]);
+                context.lineTo(sin(0.78539815 + Math.PI)[0], sin(0.78539815 + Math.PI)[1]);
+                context.lineTo(cos(1.5707963 + Math.PI)[0], cos(1.5707963 + Math.PI)[1]);
+                context.lineTo(sin(2.35619445 + Math.PI)[0], sin(2.35619445 + Math.PI)[1]);
+                context.lineTo(cos(3.1415926 + Math.PI)[0], cos(3.1415926 + Math.PI)[1]);
+                context.fillStyle = rgba || "rgb(255, 249, 100)";
+                context.fill();
+                context.beginPath();
+                civ.parentNode.removeChild(civ);
+                return civ.toDataURL("image/png");
+                function cos(cos) {
+                    return [Math.cos(cos) * (civ.width / 2) + civ.width / 2, Math.sin(cos) * (civ.height / 2) + civ.height / 2]
+                }
+
+                function sin(sin) {
+                    return [Math.cos(sin) * (civ.width / 2 / 3) + civ.width / 2, Math.sin(sin) * (civ.height / 2 / 3) + civ.height / 2]
+                }
+            }
+        }
+                 var alternate drawing board = function (x, y, rgba) {
+            var civ = document.createElement("canvas");
+            civ.width = x || document.body.offsetWidth / 100;
+            civ.height = y || document.body.offsetWidth / 100;
+            civ.id = "stpc";
+            civ.style = "display:none; z-index:-9999";
+            document.body.appendChild(civ);
+            var canvas = document.getElementById("stpc");
+            var context = canvas.getContext("2d");
+            return [canvas, context];
+        }
+                 var modification = {
+                         Modify the background: function (canvas, color) {
+                canvas.style.backgroundColor = color;
+                return true;
+            }
+        }
+                 var load = function (load) {
+                         return new load();
+        }
+                 Load(function () {
+                         var Artboard return = parameter. Artboard loading ("Artboard id");
+                         Modify. Modify the background (back to the drawing board, "rgb(9, 11, 31)");
+                         var cvs = parameter. Two D configuration (drawing board return);
+                         var stars = parameter.star configuration();
+                         var star map = parameter. background star map (returned on the drawing board, stars, 500);
+                         var cexiao = drawing board return.width;
+            var cexiaox = 0;
+            var nico = [];
+            var maki = "";
+            (function donghua() {
+                                 cvs.clearRect(0, 0, artboard returns.width, artboard returns.height);
+                                 cvs.drawImage(Star map, 0, 0);
+                var mrs = Math.random()*10+5;
+                if (nico.length < 10) {
+                                         var naive = new Naive(Math.random() * return from artboard. width * 2, -Math.random()* return from artboard. height, mrs, mrs, Math.random() * 2 + 10,2.8,0,0 );
+                    nico.push(naive);
+                }
+                for (i = 0; i < nico.length; i++) {
+                    maki = nico[i];
+                    var tty = maki.shan();
+                                         if (tty[0]<-drawing board return.width&&tty[1]>drawing board return.height*2) {
+                        nico.splice(i,1);
+                    }
+                }
+                requestAnimationFrame(donghua);
+            })();
+            function Naive(x, y, w, h, s,d,pi,hw,z) {
+                this.x = x;
+                this.y = y;
+                this.w = w;
+                this.h = h;
+                this.s = s;
+				this.pi = pi;
+				this.d = d;
+				this.z = z;
+                this.shan = function () {
+					this.dx = this.pi*Math.cos(this.d)+this.x;
+					this.dy = this.pi*Math.sin(this.d)+this.y;
+					cvs.beginPath();
+					cvs.moveTo(this.dx,this.dy);
+					cvs.lineTo(this.x,this.y);
+					cvs.lineWidth = 1;
+					this.lGrd = cvs.createLinearGradient(this.dx,this.dy,this.x,this.y);
+					this.lGrd.addColorStop(0, '#4CAF50');
+					this.lGrd.addColorStop(1, 'rgba(0,0,0,0)');
+					cvs.strokeStyle = this.lGrd;
+					cvs.stroke();
+					cvs.beginPath();
+                                         cvs.drawImage(stars, this.dx-this.w/2, this.dy-this.h/2, this.w, this.h);
+                    this.pi +=50;
+					this.z += 0.1;
+                    return [this.dx,this.dy];
+                }
+
+            }
+            window.onresize = function () {
+                                 The drawing board returns. width = window.innerWidth;
+                                 The artboard returns. height = window.innerHeight;
+				 Star map = parameter. Background star map (return from the drawing board, stars, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>
