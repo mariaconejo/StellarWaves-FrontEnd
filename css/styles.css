@@ -465,7 +465,7 @@ h3{
 
 .forms__container{
     width: 421px;
-    height: 100vh;
+    height: 708px;
     float: right;
     background: rgba(230, 230, 230, 0.38);
 }
@@ -515,9 +515,9 @@ li + li::after{
     background-color: #4B3F72;
     content: "";
     height: 2px;
-    right: 190px;
+    right: 31px;
     position: absolute;
-    top: 312px;
+    top: 297px;
     width: 395px;
 
 }
