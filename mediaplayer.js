@@ -1,6 +1,6 @@
 import { audio, stopBtn, startBtn } from './js/util.js';
 import Canvas from './js/canvas.js';
-import ObserverMediaPlayer from './js/Observer.js';
+import ObserverMediaPlayer from './js/observer.js';
 
 const startObv = new ObserverMediaPlayer(startBtn, 'click');
 const stopObv = new ObserverMediaPlayer(stopBtn, 'click');
@@ -36,17 +36,6 @@ function mediaplayerPlay() {
 function mediaplayerPause() {
   audio.pause();
 }
-
-// function prevSong() {
-//   songIndex--;
-
-//   if (songIndex < 0) {
-//     songIndex = songs.length - 1;
-//   }
-
-//   loadSong(songs[songIndex]);
-//   mediaplayer();
-// }
 
 startObv.addObserver(mediaplayerPlay);
 stopObv.addObserver(mediaplayerPause);
