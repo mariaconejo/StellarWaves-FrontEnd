@@ -3,6 +3,8 @@ const linkArtits = 'https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/publi
 const linkSong = 'https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs';
 const urlUsers = 'https://stellarwaves.herokuapp.com/users';
 const ulrUser = 'https://stellarwaves.herokuapp.com/user';
+const loginUrl = 'https://stellarwaves.herokuapp.com/user/login';
+
 // Modal
 const modal = document.getElementById('modal__Songs');
 const btnAddSong = document.getElementById('btn__addSong');
@@ -30,4 +32,5 @@ export {
   playListParam,
   songParam,
   artistPlaylistParam,
+  loginUrl,
 };

@@ -1,7 +1,7 @@
 import {
   linkArtits,
 } from './js/util.js';
-import artistApi  from './js/api.js';
+import {artistApi}  from './js/api.js';
 
 const api = await artistApi(linkArtits);
 

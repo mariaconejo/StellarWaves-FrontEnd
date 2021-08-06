@@ -1,4 +1,4 @@
-import artistApi from './api.js';
+import {artistApi} from './api.js';
 
 import { artistParametresUrl, linkArtits, linkSong } from './util.js';
 

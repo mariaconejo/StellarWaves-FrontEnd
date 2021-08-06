@@ -3,7 +3,7 @@ import {
 } from './js/util.js';
 import Canvas from './js/canvas.js';
 import ObserverMediaPlayer from './js/observer.js';
-import artistApi from './js/api.js';
+import { artistApi } from './js/api.js';
 
 const audio = document.querySelector('#audio');
 
