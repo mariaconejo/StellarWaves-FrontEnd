@@ -375,7 +375,7 @@ li + li::after {
 
 .forms__container {
   width: 421px;
-  height: 100vh;
+  height: 708px;
   float: right;
   background: rgba(230, 230, 230, 0.38); }
 
@@ -465,16 +465,17 @@ h3{
 
 .forms__container{
     width: 421px;
-    height: 708px;
+    height: 725px;
     float: right;
     background: rgba(230, 230, 230, 0.38);
 }
 
 
-h2{
+h2 a{
     color: #fff;
     font-family: 'Righteous', cursive;
     font-size: 30px;
+    text-decoration: none;
 }
 
 input{
@@ -515,11 +516,15 @@ li + li::after{
     background-color: #4B3F72;
     content: "";
     height: 2px;
-    right: 31px;
+    right: 219px;
     position: absolute;
     top: 297px;
     width: 395px;
 
+}
+
+.form__register form h2{
+  margin-top: 39px;
 }
 
 .primary__button{
@@ -718,6 +723,10 @@ path:hover{
     float: left;
 }
 
+#profile{
+  height: 551px;
+  margin-top: 78px;
+}
 
 .artist__img--cover, .album__img{
     width: 25%;
@@ -1019,7 +1028,27 @@ path:hover {
 }
 
 .edit__button{
-  float:left;
+
+  height: 30px;
+  width: 30px;
+  background: none;
+  border-radius: 30px;
+  border: solid 0px;
+}
+
+.edit__button{
+  display: flex;
+  float:right;
+}
+
+.edit__button img{
+  text-align: right;
+  height: 30px;
+  width: 30px;
+}
+
+.edit__button img:hover {
+  background: #2f316269;
 }
 
 .default__playlist ul{
@@ -1039,11 +1068,34 @@ path:hover {
 .default__playlist li{
   margin-bottom:20px;
 }
+.default__playlist img{
+  display: flex;
+  float:right;
+}
+
 
 hr{
   color: #FFE4AD;
   text-align: center;
   width:200px;
+}
+
+.playlist__name--list ul{
+  list-style: none;
+  margin-left: 35px
+}
+
+.playlist__name--list a{
+  color: #FFE4AD;
+  font-family: 'Righteous', cursive;
+  font-size: 23px;
+  text-decoration: none;
+}
+.playlist__name--list a{
+  margin-top:77px;
+}
+.playlist__name--list li{
+  margin-bottom:20px;
 }
 
 .playlist__name--list{
@@ -1057,12 +1109,98 @@ hr{
   text-decoration: none;
 }
 
-.songs__container h1{
+.playlist__name--list img {
+
+  height: 30px;
+  width: 30px;
+}
+
+.playlist__name--list img{
+  display: flex;
+  float:right;
+}
+
+.default__playlist img{
+  height: 30px;
+  width: 30px;
+}
+
+.songs__profile{
+  width: 750px;
+  margin: 0 auto;
+}
+
+.songs__profile h1{
   color: #FFE4AD;
   font-family: 'Righteous', cursive;
   font-size: 23px;
-
 }
+
+.songs__profile .edit__button img{
+  display: flex;
+  height: 30px;
+  margin:0;
+  width: 30px;
+}
+
+.song {
+  margin: 70px 0px 70px 0px;
+}
+
+.info__h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: right;
+}
+
+.info__h3 h3 + h3{
+  margin-left: 20px;
+}
+
+.artist__name--profile {
+  float: left;
+}
+
+.btn__play--profile{
+  height: 80px;
+  width:80px;
+  display:flex;
+  float: right;
+  margin-top: 14px;
+}
+
+.save__button{
+  height: 30px;
+  width: 30px;
+  background: none;
+  border-radius: 30px;
+  border: solid 0px;
+}
+
+.save__button img{
+  height: 30px;
+  width: 30px;
+}
+
+.delete__button{
+  height: 30px;
+  width: 30px;
+  background: none;
+  border-radius: 30px;
+  border: solid 0px;
+}
+
+.delete__button img{
+  height: 30px;
+  width: 30px;
+}
+.save__button:hover{
+  background-color: #ffffff52;
+}
+.delete__button:hover{
+  background-color: #ffffff52;
+}
+
 
 /*select existing playlist*/
 

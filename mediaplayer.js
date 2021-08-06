@@ -1,4 +1,4 @@
-import { audio, stopBtn, startBtn } from './js/util.js';
+import { audio, stopBtn, startBtn, prevBtn } from './js/util.js';
 import Canvas from './js/canvas.js';
 import Observer from './js/Observer.js';
 
