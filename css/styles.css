@@ -362,7 +362,7 @@ label {
   font-size: 16px;
   font-family: 'Poppins', sans-serif; }
 
-li + li::after {
+.separation__menu + .separation__menu::after {
   background-color: #119DA4;
   transform: rotate(90deg);
   content: "";
@@ -499,8 +499,8 @@ li + li::after {
 
 canvas {
   width: 1169px;
-  height: 270px;
-  padding-bottom: 10px;
+  height: 500px;
+  margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
   display: block; }
@@ -580,8 +580,8 @@ path:hover {
   background: rgba(17, 157, 164, 0.45);
   border-radius: 29px;
   float: right;
-  margin-left: 249px;
-  margin-top: 75px; }
+  margin-left: 154px;
+  margin-top: 112px; }
 
 .recent__song--info {
   text-align: center; }
@@ -593,14 +593,6 @@ path:hover {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   color: #fff; }
-
-.artist__container {
-  margin-left: 23px;
-  margin-top: 243px;
-  border: blueviolet 3px solid;
-  width: 500px;
-  height: 127px;
-  float: left; }
 
 .artist__name--container {
   margin-top: 78px;
@@ -648,3 +640,203 @@ path:hover {
 
 .js-content-hidden {
   display: none; }
+
+.user__container--info {
+  margin-top: 78px;
+  height: 551px;
+  width: 277px;
+  background: #1F2041;
+  float: left; }
+
+.user {
+  color: #FFE4AD;
+  font-size: 30px;
+  font-family: 'Righteous', cursive;
+  text-decoration: none; }
+
+.user {
+  margin-left: 35px;
+  margin-top: 77px; }
+
+.edit__button {
+  height: 30px;
+  width: 30px;
+  background: none;
+  border-radius: 30px;
+  border: solid 0px; }
+
+.edit__button {
+  display: flex;
+  float: right; }
+
+.edit__button img {
+  text-align: right;
+  height: 30px;
+  width: 30px; }
+
+.edit__button img:hover {
+  background: #2f316269; }
+
+.default__playlist ul {
+  list-style: none;
+  margin-left: 35px; }
+
+.default__playlist a {
+  color: #FFE4AD;
+  font-family: 'Righteous', cursive;
+  font-size: 23px;
+  text-decoration: none; }
+
+.default__playlist a {
+  margin-top: 77px; }
+
+.default__playlist li {
+  margin-bottom: 20px; }
+
+.default__playlist img {
+  display: flex;
+  float: right; }
+
+hr {
+  color: #FFE4AD;
+  text-align: center;
+  width: 200px; }
+
+.playlist__name--list ul {
+  list-style: none;
+  margin-left: 35px; }
+
+.playlist__name--list a {
+  color: #FFE4AD;
+  font-family: 'Righteous', cursive;
+  font-size: 23px;
+  text-decoration: none; }
+
+.playlist__name--list a {
+  margin-top: 77px; }
+
+.playlist__name--list li {
+  margin-bottom: 20px; }
+
+.playlist__name--list {
+  list-style: none; }
+
+.playlist__name--list a {
+  color: #FFE4AD;
+  font-family: 'Righteous', cursive;
+  font-size: 23px;
+  margin-left: 35px;
+  text-decoration: none; }
+
+.playlist__name--list img {
+  height: 30px;
+  width: 30px; }
+
+.playlist__name--list img {
+  display: flex;
+  float: right; }
+
+.default__playlist img {
+  height: 30px;
+  width: 30px; }
+
+.songs__profile {
+  width: 750px;
+  margin: 0 auto; }
+
+.songs__profile h1 {
+  color: #FFE4AD;
+  font-family: 'Righteous', cursive;
+  font-size: 23px; }
+
+.songs__profile .edit__button img {
+  display: flex;
+  height: 30px;
+  margin: 0;
+  width: 30px; }
+
+.song {
+  margin: 70px 0px 70px 0px; }
+
+.info__h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: right; }
+
+.info__h3 h3 + h3 {
+  margin-left: 20px; }
+
+.artist__name--profile {
+  float: left; }
+
+.btn__play--profile {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  float: right;
+  margin-top: 14px; }
+
+.save__button {
+  height: 30px;
+  width: 30px;
+  background: none;
+  border-radius: 30px;
+  border: solid 0px; }
+
+.save__button img {
+  height: 30px;
+  width: 30px; }
+
+.delete__button {
+  height: 30px;
+  width: 30px;
+  background: none;
+  border-radius: 30px;
+  border: solid 0px; }
+
+.delete__button img {
+  height: 30px;
+  width: 30px; }
+
+.save__button:hover {
+  background-color: #ffffff52; }
+
+.delete__button:hover {
+  background-color: #ffffff52; }
+
+/*select existing playlist*/
+.existing__playlist {
+  border-radius: 13px;
+  color: #807f7f;
+  height: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  width: 88px; }
+
+.artist__home {
+  clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
+  width: 200px;
+  height: 200px;
+  margin-left: 30px; }
+
+.name__artist {
+  text-decoration: none; }
+  .name__artist h2 {
+    font-family: Righteous;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-left: 20px; }
+
+.artist-list li {
+  margin-left: 10px; }
+
+.artist__container {
+  margin-left: -61px;
+  margin-top: 243px;
+  float: left; }
+
+.artist__container ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between; }

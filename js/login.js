@@ -4,7 +4,9 @@ const register = document.getElementById('create');
 
 const login = document.getElementById('login');
 
-register.addEventListener('submit', (e) => {
+// const userId = params.get('userId');
+
+register.addEventListener('submit', async (e) => {
   e.preventDefault();
   const passwords = register.elements[2].value;
   const userName = register.elements[0].value;
@@ -14,20 +16,21 @@ register.addEventListener('submit', (e) => {
     email: userEmail,
     password: passwords,
   };
-  const data = createUser(users);
+  const data = await createUser(users);
+  window.location.replace(`home.html?userId=${data.newUser._id}`);
   console.log(data);
 });
 
-login.addEventListener('submit', (e) => {
+login.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const userEmail = register.elements[1].value;
-  const passwords = register.elements[2].value;
-  const user = {
+  const userEmail = login.elements[0].value;
+  const passwords = login.elements[1].value;
+  const users = {
     email: userEmail,
     password: passwords,
   };
-  const data = loginUser(user);
-  window.location.href = 'home.html';
-
-  console.log(data);
+  const data = await loginUser(users);
+  if (data.data) {
+    window.location.replace(`home.html?userId=${data.data.id}`);
+  }
 });
