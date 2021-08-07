@@ -1,11 +1,14 @@
 import {
-  playListParam, songParam, artistPlaylistParam, linkSong,
+  playListParam,
+  songParam, artistPlaylistParam, linkSong, home, mediaplayer, artist, profile, userId,
 } from './js/util.js';
 import Canvas from './js/canvas.js';
 import ObserverMediaPlayer from './js/observer.js';
 import { artistApi } from './js/api.js';
+import { addRecents } from './js/playlist.js';
 
 const audio = document.querySelector('#audio');
+const musicTitle = document.getElementById('title-song');
 
 const startBtn = document.getElementById('btn-start');
 const stopBtn = document.getElementById('btn-stop');
@@ -54,7 +57,8 @@ function mediaplayerPause() {
 function songPlay(i, array) {
   let index = i;
   audio.src = array[index].audio;
-  console.log(index);
+  musicTitle.innerHTML = `You are listening to: ${array[index].name}`;
+  musicTitle.dataset.id = array[index].id;
   function nextsong() {
     index++;
     if (index > array.length - 1) {
@@ -95,3 +99,9 @@ async function selectPlaylist() {
 window.onload = selectPlaylist();
 startObv.addObserver(mediaplayerPlay);
 stopObv.addObserver(mediaplayerPause);
+startObv.addObserver(addRecents);
+
+home.setAttribute('href', `home.html?userId=${userId}`);
+mediaplayer.setAttribute('href', `mediaplayer.html?userId=${userId}`);
+artist.setAttribute('href', `artist.html?userId=${userId}`);
+profile.setAttribute('href', `profile.html?userId=${userId}`);

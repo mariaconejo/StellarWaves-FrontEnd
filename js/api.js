@@ -56,7 +56,7 @@ async function getRecentSongs(recent) {
     headers: {
       'Content-Type': 'application/json',
     },
-    method: 'GET',
+    method: 'PUT',
     body: JSON.stringify(recent),
   })
 

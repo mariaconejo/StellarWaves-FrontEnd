@@ -1,6 +1,6 @@
 import {artistApi} from './api.js';
 
-import { artistParametresUrl, linkArtits, linkSong } from './util.js';
+import { artistParametresUrl, linkArtits, linkSong, home, mediaplayer, artist, profile, userId } from './util.js';
 
 const valueArtist = await artistApi(linkArtits);
 
@@ -49,7 +49,7 @@ async function songs(valueArtist, contentTabs) {
       <img src="${valueSong[i].image}" alt="${valueSong[i].name}">
       <p>${valueSong[i].name}</p>
       <p>${valueSong[i].album}</p>
-      <a href="mediaplayer.html?playList=artist&&song=${valueSong[i].id}&&artistPlaylist=${valueArtist}">${valueSong[i].name}</a>
+      <a data-id="${valueSong[i].id}" href="mediaplayer.html?playList=artist&&song=${valueSong[i].id}&&artistPlaylist=${valueArtist}&&userId=${userId}">${valueSong[i].name}</a>
     </li>
     `
   songList.innerHTML += html;
@@ -123,3 +123,9 @@ function changeStatus() {
   getId(items, content);
 }
 changeStatus();
+
+
+home.setAttribute('href', `home.html?userId=${userId}`);
+mediaplayer.setAttribute('href', `mediaplayer.html?userId=${userId}`);
+artist.setAttribute('href', `artist.html?userId=${userId}`);
+profile.setAttribute('href', `profile.html?userId=${userId}`);

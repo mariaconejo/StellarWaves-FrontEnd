@@ -1,31 +1,26 @@
-function playlistFactory() {
-  this.createList = function (type) {
-    if (type === 'Favorite') {
-      return FavoriteList();
-    } if (type === 'Recent') {
-      return RecentList();
-    }
+import { getRecentSongs } from './api.js';
+import { userId } from './util.js';
+
+const title = document.getElementById('title-song');
+
+async function addRecents() {
+  const musicId = title.dataset.id;
+  const recent = {
+    userId,
+    listSongs: [musicId],
   };
-
-  class ListSong {
-    constructor(name, songs) {
-      this.name = name;
-      this.songs = songs;
-    }
-  }
-
-  function FavoriteList() {
-    return new ListSong('Favorites Songs', ['aurora', 'creep']);
-  }
-
-  function RecentList() {
-    return new ListSong('Recent Songs', ['aurora', 'creep']);
-  }
+  const data = await getRecentSongs(recent);
+  console.log(data);
 }
 
-const factory = new playlistFactory();
-const list = factory.createList('Favorite');
-const list2 = factory.createList('Recent');
+async function addFavorites() {
+  // const musicId = title.dataset.id;
+  // const infoBody = {
+  //   userId,
+  //   listSongs: [musicId],
+  // };
+  // const hi = await getBackendBody(infoBody, 'PUT', `${backendLink}/favmusic`);
+  // console.log(hi);
+}
 
-console.log(list);
-console.log(list2);
+export { addRecents, addFavorites };

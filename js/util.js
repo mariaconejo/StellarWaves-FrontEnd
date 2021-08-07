@@ -16,7 +16,7 @@ const urlUsers = 'https://stellarwaves.herokuapp.com/users';
 const ulrUser = 'https://stellarwaves.herokuapp.com/user';
 const loginUrl = 'https://stellarwaves.herokuapp.com/user/login';
 const getUser = `https://stellarwaves.herokuapp.com/user/${userId}`;
-const getRecent = `https://stellarwaves.herokuapp.com/rectmusic/${userId}`;
+const getRecent = 'https://stellarwaves.herokuapp.com/rectmusic';
 
 // Music
 
@@ -26,10 +26,10 @@ const artistPlaylistParam = params.get('artistPlaylist');
 
 // link del header
 
-const home = document.getElementById('id-user-home');
-const mediaplayer = document.getElementById('id-user-mediaplayer');
-const artist = document.getElementById('id-user-artist');
-const profile = document.getElementById('id-user-profile');
+const home = document.querySelector('.id__user--home--js');
+const mediaplayer = document.querySelector('.id__user--mediaplayer--js');
+const artist = document.querySelector('.id__user--artist--js');
+const profile = document.querySelector('.id__user--profile--js');
 
 export {
   urlUsers,
