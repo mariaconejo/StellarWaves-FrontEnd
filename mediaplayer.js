@@ -26,7 +26,6 @@ function animateCanvas() {
     window.requestAnimationFrame(animateCanvas);
   }
 }
-
 function mediaplayerPlay() {
   audio.play();
   animateCanvas();
