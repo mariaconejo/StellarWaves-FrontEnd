@@ -1,6 +1,8 @@
 import {artistApi} from './api.js';
 
-import { artistParametresUrl, linkArtits, linkSong, home, mediaplayer, artist, profile, userId } from './util.js';
+import {linkArtits, linkSong, home, mediaplayer, artist, profile, userId, artistParametresUrl } from './util.js';
+
+// Crea los tabs con la info de los artistas
 
 const valueArtist = await artistApi(linkArtits);
 
@@ -54,76 +56,55 @@ async function songs(valueArtist, contentTabs) {
     `
   songList.innerHTML += html;
 
-
-    // const songsLi = document.createElement('li');
-    // const image = document.createElement('img');
-    // image.setAttribute('src', `${valueSong[i].image}`)
-    // songsLi.appendChild(image)
-    // const nameSong = document.createElement('p');
-    // nameSong.innerHTML = `${valueSong[i].name}`
-    // songsLi.appendChild(nameSong);
-    // const albumName = document.createElement('p')
-    // albumName.innerHTML = `${valueSong[i].album}`
-    // songsLi.appendChild(albumName);
-    // const link = document.createElement('a');
-    // const html = `
-    //   <p>${valueSong[i].name}</p>
-    // `
-    // link.innerHTML += html;
-    // link.setAttribute('href', `mediaplayer.html?playList=artist&&song=${valueSong[i].id}&&artistPlaylist=${valueArtist}`)
-    // songsLi.appendChild(link);
-
   }
 }
 
+// Crea el funcionamiento de los tabs y el uso de url parameters
 
+// Codigo reutilizado del ejercicio de tabs : https://github.com/mariaconejo/js2-componente-tabs
 
-function getId(items, content) {
+function getId(names, contentInfo) {
   if (artistParametresUrl) {
-    for (let i = 0; i < items.length; i++) {
-      if (items[i].dataset.id == artistParametresUrl) {
-        items[i].classList.add('js-active');
-        const id = items[i].getAttribute('href').substring(1);
-        if (content[i].getAttribute('id') === id) {
-          content[i].classList.remove('js-content-hidden');
+    for (let i = 0; i < names.length; i++) {
+      if (names[i].dataset.id === artistParametresUrl) {
+        names[i].classList.add('js-active');
+        const id = names[i].getAttribute('href').substring(1);
+        if (contentInfo[i].getAttribute('id') === id) {
+          contentInfo[i].classList.remove('js-content-hidden');
         }
       }
     }
   } else {
-    content[0].classList.remove('js-content-hidden');
-    items[0].classList.add('js-active');
+    contentInfo[0].classList.remove('js-content-hidden');
+    names[0].classList.add('js-active');
   }
 }
 
-function tabsController(items, content) {
-  for (let i = 0; i < items.length; i++) {
-    items[i].addEventListener('click', (event) => {
+function tabsView(names, contentInfo) {
+  for (let i = 0; i < names.length; i++) {
+    names[i].addEventListener('click', (event) => {
       event.preventDefault();
       const id = event.currentTarget.getAttribute('href').substring(1);
-      // eslint-disable-next-line no-shadow
-      for (let i = 0; i < content.length; i++) {
-        content[i].classList.add('js-content-hidden');
-        if (content[i].getAttribute('id') === id) {
-          content[i].classList.remove('js-content-hidden');
+      for (let i = 0; i < contentInfo.length; i++) {
+        contentInfo[i].classList.add('js-content-hidden');
+        if (contentInfo[i].getAttribute('id') === id) {
+          contentInfo[i].classList.remove('js-content-hidden');
         }
       }
-      // eslint-disable-next-line no-shadow
-      for (let i = 0; i < items.length; i++) {
-        items[i].classList.remove('js-active');
+      for (let i = 0; i < names.length; i++) {
+        names[i].classList.remove('js-active');
       }
       event.currentTarget.classList.add('js-active');
     });
   }
 }
 
-function changeStatus() {
-  const items = document.querySelectorAll('.tabs__item');
-  const content = document.querySelectorAll('.tab-content-info');
-  tabsController(items, content);
-  getId(items, content);
-}
-changeStatus();
+const names = document.querySelectorAll('.tabs__item');
+const contentInfo = document.querySelectorAll('.tab-content-info');
+tabsView(names, contentInfo);
+getId(names, contentInfo);
 
+// pasar el id del usuario por URL PARAMETERS
 
 home.setAttribute('href', `home.html?userId=${userId}`);
 mediaplayer.setAttribute('href', `mediaplayer.html?userId=${userId}`);

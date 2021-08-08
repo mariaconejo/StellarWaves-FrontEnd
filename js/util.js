@@ -1,13 +1,11 @@
-// Modal
-const modal = document.getElementById('modal__Songs');
-const btnAddSong = document.getElementById('btn__addSong');
-const close = document.getElementById('close');
-
 // Tabs
 const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
 const artistParametresUrl = params.get('artistId');
 const userId = params.get('userId');
+const playListParam = params.get('playList');
+const songParam = params.get('song');
+const artistPlaylistParam = params.get('artistPlaylist');
 
 // Links API
 const linkArtits = 'https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/artists';
@@ -16,13 +14,13 @@ const urlUsers = 'https://stellarwaves.herokuapp.com/users';
 const ulrUser = 'https://stellarwaves.herokuapp.com/user';
 const loginUrl = 'https://stellarwaves.herokuapp.com/user/login';
 const getUser = `https://stellarwaves.herokuapp.com/user/${userId}`;
-const getRecent = 'https://stellarwaves.herokuapp.com/rectmusic';
-
-// Music
-
-const playListParam = params.get('playList');
-const songParam = params.get('song');
-const artistPlaylistParam = params.get('artistPlaylist');
+const upsertRecent = 'https://stellarwaves.herokuapp.com/rectmusic';
+const upsertFav = 'https://stellarwaves.herokuapp.com/favmusic';
+const createPlaylist = 'https://stellarwaves.herokuapp.com/playlist';
+const getRecent = `https://stellarwaves.herokuapp.com/rectmusic/${userId}`;
+const listSongInfo = 'https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/song/';
+const getPlaylist = `https://stellarwaves.herokuapp.com/playlists/${userId}`;
+const addPlaylistSongs = `https://stellarwaves.herokuapp.com/playlist/${userId}`;
 
 // link del header
 
@@ -49,5 +47,11 @@ export {
   mediaplayer,
   artist,
   profile,
+  upsertRecent,
+  upsertFav,
+  createPlaylist,
   getRecent,
+  listSongInfo,
+  getPlaylist,
+  addPlaylistSongs,
 };

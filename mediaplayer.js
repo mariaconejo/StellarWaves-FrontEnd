@@ -5,7 +5,12 @@ import {
 import Canvas from './js/canvas.js';
 import ObserverMediaPlayer from './js/observer.js';
 import { artistApi } from './js/api.js';
-import { addRecents } from './js/playlist.js';
+import {
+  addFavorites, addRecents, addSong, selectModal, selectPlaylists, select,
+} from './js/playlist.js';
+import {
+  modalFunction, btnAddSong,
+} from './js/modal.js';
 
 const audio = document.querySelector('#audio');
 const musicTitle = document.getElementById('title-song');
@@ -14,11 +19,15 @@ const startBtn = document.getElementById('btn-start');
 const stopBtn = document.getElementById('btn-stop');
 const prevBtn = document.getElementById('btn-prev');
 const nextBtn = document.getElementById('btn-next');
+const favBtn = document.getElementById('btn-fav');
 
+const selectObv = new ObserverMediaPlayer(select, 'change');
 const startObv = new ObserverMediaPlayer(startBtn, 'click');
 const stopObv = new ObserverMediaPlayer(stopBtn, 'click');
 const prevObv = new ObserverMediaPlayer(prevBtn, 'click');
 const nextObv = new ObserverMediaPlayer(nextBtn, 'click');
+const favObv = new ObserverMediaPlayer(favBtn, 'click');
+const addObv = new ObserverMediaPlayer(btnAddSong, 'click');
 
 const canvas = new Canvas();
 
@@ -96,10 +105,18 @@ async function selectPlaylist() {
   }
 }
 
+selectPlaylists();
+
 window.onload = selectPlaylist();
 startObv.addObserver(mediaplayerPlay);
 stopObv.addObserver(mediaplayerPause);
 startObv.addObserver(addRecents);
+nextObv.addObserver(addRecents);
+prevObv.addObserver(addRecents);
+favObv.addObserver(addFavorites);
+selectObv.addObserver(selectModal);
+selectObv.addObserver(addSong);
+addObv.addObserver(modalFunction);
 
 home.setAttribute('href', `home.html?userId=${userId}`);
 mediaplayer.setAttribute('href', `mediaplayer.html?userId=${userId}`);

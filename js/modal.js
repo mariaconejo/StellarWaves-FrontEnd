@@ -1,19 +1,33 @@
+
+
 const modal = document.getElementById('modal__Songs');
+const btnAddSong = document.getElementById('btn-add');
+const close = document.getElementById('close');
+const saveBtn = document.getElementById('btn__savePlaylist');
 
-const btn = document.querySelector('.button__background');
+function modalFunction() {
+  btnAddSong.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'block';
+  });
 
-const span = document.getElementsByClassName('close')[0];
-
-btn.onclick = function () {
-  modal.style.display = 'block';
-};
-
-span.onclick = function () {
-  modal.style.display = 'none';
-};
-
-window.onclick = function (event) {
-  if (event.target == modal) {
+  close.addEventListener('click', (e) => {
+    e.preventDefault();
     modal.style.display = 'none';
-  }
+  });
+
+  window.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+  saveBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'none';
+  });
+}
+
+export {
+  modalFunction, btnAddSong,
 };

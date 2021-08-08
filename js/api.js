@@ -1,5 +1,6 @@
 import {
-  ulrUser, loginUrl, getUser, getRecent,
+  ulrUser, loginUrl, getUser, upsertRecent, upsertFav, createPlaylist, getRecent, addPlaylistSongs,
+  getPlaylist,
 } from './util.js';
 
 async function artistApi(link) {
@@ -51,8 +52,8 @@ async function getUserInfo(user) {
   return link;
 }
 
-async function getRecentSongs(recent) {
-  const link = await fetch(getRecent, {
+async function upsertRecentSongs(recent) {
+  const link = await fetch(upsertRecent, {
     headers: {
       'Content-Type': 'application/json',
     },
@@ -65,6 +66,80 @@ async function getRecentSongs(recent) {
   return link;
 }
 
+async function getRecentSong(recent) {
+  const link = await fetch(getRecent, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'GET',
+    body: JSON.stringify(recent),
+  })
+
+    .then((response) => response.json())
+    .then((data) => data);
+  return link;
+}
+
+async function upsertFavSongs(fav) {
+  const link = await fetch(upsertFav, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'PUT',
+    body: JSON.stringify(fav),
+  })
+
+    .then((response) => response.json())
+    .then((data) => data);
+  return link;
+}
+
+async function createPlaylistUser(playlist) {
+  const link = await fetch(createPlaylist, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+    body: JSON.stringify(playlist),
+  })
+
+    .then((response) => response.json())
+    .then((data) => data);
+  console.log(link);
+  return link;
+}
+
+async function getPlaylistUser(playlistGet) {
+  const link = await fetch(getPlaylist, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'GET',
+    body: JSON.stringify(playlistGet),
+  })
+
+    .then((response) => response.json())
+    .then((data) => data);
+  console.log(link);
+  return link;
+}
+
+async function addSongsPlaylist(playlistPut) {
+  const link = await fetch(addPlaylistSongs, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'PUT',
+    body: JSON.stringify(playlistPut),
+  })
+
+    .then((response) => response.json())
+    .then((data) => data);
+  console.log(link);
+  return link;
+}
+
 export {
-  artistApi, createUser, loginUser, getUserInfo, getRecentSongs,
+  artistApi, createUser, loginUser, getUserInfo, upsertRecentSongs, upsertFavSongs,
+  createPlaylistUser, getRecentSong, getPlaylistUser, addSongsPlaylist,
 };

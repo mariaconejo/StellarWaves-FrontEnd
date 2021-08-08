@@ -1,10 +1,11 @@
 import {
-  linkArtits, userId, home, mediaplayer, artist, profile,
+  linkArtits, userId, home, mediaplayer, artist, profile, listSongInfo, linkSong,
 } from './js/util.js';
-import {artistApi, getUserInfo}  from './js/api.js';
+import {artistApi, getUserInfo, getRecentSong}  from './js/api.js';
 
 const api = await artistApi(linkArtits);
 const nameUser = document.getElementById('name-user');
+const nameSong = document.getElementById('name-song');
 
 
 function addArtist() {
@@ -23,9 +24,12 @@ function addArtist() {
 addArtist();
 
 async function welcomeUser() {
-  const getUser = await getUserInfo()
-  nameUser.innerHTML = `Welcome, @${getUser.data.name}`
-
+  const getUser = await getUserInfo();
+  const getRecent = await getRecentSong();
+  nameUser.innerHTML = `Welcome, @${getUser.data.name}`;
+  const lastSong = getRecent.data[0].listSongs[0];
+  const songName = await artistApi(`${listSongInfo}${lastSong}`);
+  nameSong.innerHTML = songName.name;
 }
 
 welcomeUser()
