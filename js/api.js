@@ -1,57 +1,41 @@
+import { ulrUser, loginUrl } from './util.js';
 
-import Artist from "./artist.js";
-import Song from "./song.js";
-import { prueba } from "../home.js";
+async function artistApi(link) {
+  const result = await fetch(link)
+    .then((response) => response.json())
+    .then((data) => data);
+  return result;
+}
 
-function fetchArtist() {
-    fetch('https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/artists')
+async function createUser(user) {
+  const link = await fetch(ulrUser, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+    body: JSON.stringify(user),
+  })
+
     .then((response) => response.json())
     .then((data) => {
-      prueba(data);
-      // for(let i = 0; i < data.length;  i++){
-      //     const artist = new Artist(data[i].id, data[i].name, data[i].image, data[i].description)
-      //       artist.addNameArtist();
-      //       artist.addInfoArtist()
-
-      //       console.log(artist)
-      //   }
-  });
-  // callSongs();
+      console.log(data);
+    });
+  return link;
 }
 
+async function loginUser(user) {
+  const link = await fetch(loginUrl, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+    body: JSON.stringify(user),
+  })
 
-function fetchSongs(){
-    const url = `https://kt2ul4cwza.execute-api.us-east-2.amazonaws.com/public/songs/aurora`
-    fetch(`${url}`,{
-      method: "GET"
-    })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok " + response.status);
-      }
-      return response.json();
-    })
+    .then((response) => response.json())
     .then((data) => {
-      for(let i = 0; i < data.length;  i++){
-          const song = new Song(data[i].id, data[i].name, data[i].album, data[i].image, data[i].audio)
-          song.songRenderDom()
-
-      }
-    })
-    .catch((error) => {
-      console.log("error", error);
-    })
+      console.log(data);
+    });
+  return link;
 }
-
-// function callSongs(){
-//   const clickSong = document.querySelector('.songs__container');
-//   clickSong.addEventListener('click', (event) => {
-//     const target = event.target;
-//     if(target.className === 'name__artist--js') {
-//       const idSong = target.getAttribute('href')
-//       fetchSongs(idSong)
-//     }
-//   })
-// }
-
-export {fetchArtist, fetchSongs}
+export { artistApi, createUser, loginUser };
