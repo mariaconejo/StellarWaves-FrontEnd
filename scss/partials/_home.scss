@@ -1,0 +1,36 @@
+.artist__home{
+  clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
+  width: 200px;
+  height: 200px;
+  margin-left: 30px;
+}
+
+.name__artist {
+  text-decoration: none;
+
+  h2{
+    font-family: Righteous;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-left: 20px;
+  }
+}
+
+.artist-list li {
+  margin-left: 10px;
+
+}
+
+.artist__container{
+  margin-left: -61px;
+  margin-top: 243px;
+  float: left;
+}
+
+
+.artist__container ul{
+  display: flex;
+  list-style: none;
+  justify-content:space-between;
+}

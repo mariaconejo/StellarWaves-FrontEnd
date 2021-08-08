@@ -1,0 +1,17 @@
+@import 'library/normalize';
+@import 'helpers/variables';
+
+@import 'config/global';
+
+@import 'components/form';
+@import 'components/buttons';
+@import 'components/modal';
+@import 'components/canvas';
+
+@import 'layout/menu';
+
+@import'partials/mediaplayer';
+@import'partials/artists';
+@import'partials/profile';
+@import'partials/home';
+

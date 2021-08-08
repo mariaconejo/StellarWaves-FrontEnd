@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Media player"/>
+        <meta name="Keywords" content="music, web, mediaplayer, artist"/>
+        <meta name="author" content="María Conejo y Jeareth Venegas"/>
+        <title>Stellar Waves</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <link rel="icon" href="img/logo.png" type="image/gif" sizes="16x16">
+    </head>
+    <body>
+      <div class="wrapper__out">
+        <div class="wrapper clearfix">
+            <div class="logo_img">
+                <img src="./img/logo-mini.png" alt="">
+            </div>
+            <div class="menu">
+                <ul class="menu__list">
+                  <li class="separation__menu"><a class="id__user--home--js" href="home.html">Home</a></li>
+                  <li class="separation__menu"><a class="id__user--mediaplayer--js" href="mediaplayer.html">MediaPlayer</a></li>
+                  <li class="separation__menu"><a class="id__user--artist--js" href="artist.html">Artist</a></li>
+                  <li class="separation__menu"><a class="id__user--profile--js" href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="user__container--info clearfix">
+          <div class="user__info">
+              <h1><a href="#" class="user">@User</a>
+                <button id="edit__button" class="edit__button" aria-labelledby="button-label">
+                  <img src="img/edit.png" alt="icon para editar">
+                </button>
+
+              </h1>
+
+          </div>
+
+          <div class="default__playlist">
+            <ul id="recent_list">
+              <li><a href="#">Recent played</a> <img src="img/recent-played.png" alt="icon de canciones reproducidas recientemente"></li>
+              <li><a href="#">Favorites</a> <img src="img/fav.png" alt="icon de playlist de canciones favoritas"></li>
+            </ul>
+          <hr>
+          </div>
+          <div class="new__playlist">
+            <ul class="playlist__name--list">
+              <li><a href="#">Songs for study</a><img src="img/playlist.png" alt="Playlist"></li>
+              <li><a href="#">Songs for my crush</a><img src="img/playlist.png" alt="Playlist"></li>
+              <li><a href="#">Songs for party</a><img src="img/playlist.png" alt="Playlist"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="songs" id="profile">
+          <div class="songs__profile">
+            <h1>Songs for study
+              <button id="edit__button" class="edit__button" aria-labelledby="button-label">
+                <img src="img/edit.png" alt="icon para editar">
+              </button>
+              <!---->
+                <!-- <input type="text" class="edit__input" id="edit__input" placeholder="Editar nombre del playlist">
+                <button class="save__button" id="save__button">
+                  <img src="img/save.png" alt="icon del botón de guardar">
+                </button>
+                <button class="delete__button" id="delete__button">
+                  <img src="img/delete.png" alt="icon del botón de eliminar">
+                </button> -->
+            </h1>
+            <!---->
+            <div class="song clearfix" id="song">
+              <!--portada de album-->
+              <img src="img/portada.png" alt="Portada de album">
+              <div class="info__h3">
+                <!--nombre de la canción-->
+                <h3 class="song__name--profile">One more time</h3>
+                <!--nombre grupo-->
+                <h3 class="artist__name--profile">Discovery</h3>
+              </div>
+              <!--botón de play-->
+              <button id="btn-start"  class="button__background btn-play btn__play--profile" aria-labelledby="button-label">
+                <span id="button-label" hidden>Add Song</span>
+                <svg class="button__active"  aria-hidden="true" focusable="false" width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M38.3288 21.3864C40.8399 14.2682 50.9065 14.2682 53.4175 21.3864L54.8726 25.5111C55.9768 28.6412 58.899 30.7644 62.2171 30.8473L66.5896 30.9565C74.1354 31.145 77.2461 40.7189 71.2523 45.3067L67.7791 47.9651C65.1434 49.9825 64.0272 53.4179 64.9737 56.5992L66.221 60.7914C68.3735 68.0261 60.2294 73.9431 54.014 69.6603L50.4124 67.1786C47.6793 65.2953 44.0671 65.2953 41.334 67.1786L37.7324 69.6603C31.517 73.9431 23.3729 68.0261 25.5254 60.7914L26.7727 56.5992C27.7192 53.4179 26.603 49.9825 23.9673 47.9651L20.4941 45.3067C14.5003 40.7189 17.611 31.145 25.1568 30.9565L29.5292 30.8473C32.8473 30.7644 35.7696 28.6412 36.8738 25.5111L38.3288 21.3864Z" fill="#FFE4AD"/>
+                    <path d="M43.6025 34.7967C41.6055 33.5209 38.9873 34.9551 38.9873 37.3248V52.7681C38.9873 55.1378 41.6055 56.572 43.6025 55.2962L55.6885 47.5745C57.535 46.3949 57.535 43.698 55.6885 42.5184L43.6025 34.7967Z" fill="#119DA4"/>
+                </svg>
+            </button>
+            <!--botón de eliminar-->
+            <!-- <button class="delete__button dlt__btn--profile" id="delete__button">
+              <img src="img/delete.png" alt="icon del botón de eliminar">
+            </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/profile.js" type="module"></script>
+    </body>
+</html>

@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w sass -o css",
+    "scss": "node-sass --watch scss -o css",
     "sass-build": "node-sass sass -o public/css --output-style compressed",
     "dev-server": "live-server --watch=\"index.html,sass,js\"",
     "eslint": "eslint js",
-    "dev": "concurrently \"npm run sass-build\" \"npm run sass\" \"npm run dev-server\" \"esw -w js\""
+    "dev": "concurrently \"npm run sass-build\" \"npm run scss\" \"npm run dev-server\" \"esw -w js\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mariaconejo/StellasWaves.git"
+    "url": "git+https://github.com/mariaconejo/StellarWaves-FrontEnd.git"
   },
   "keywords": [
     "mediaPlayer"
@@ -21,9 +21,9 @@
   "author": "Jeareth Venegas Y Maria Conejo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mariaconejo/StellasWaves/issues"
+    "url": "https://github.com/mariaconejo/StellarWaves-FrontEnd/issues"
   },
-  "homepage": "https://github.com/mariaconejo/StellasWaves#readme",
+  "homepage": "https://github.com/mariaconejo/StellarWaves-FrontEnd#readme",
   "dependencies": {
     "concurrently": "^6.2.0",
     "node-sass": "^6.0.1"
