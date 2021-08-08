@@ -1,6 +1,10 @@
 class ObserverMediaPlayer {
-  constructor() {
+  constructor(button, event) {
     this.observers = [];
+    this.button = button;
+    this.button.addEventListener(event, () => {
+      this.notifyObservers();
+    });
   }
 
   addObserver(observer) {
@@ -10,20 +14,10 @@ class ObserverMediaPlayer {
   }
 
   notifyObservers() {
-    this.observers.forEach(observer => {
+    this.observers.forEach((observer) => {
       observer();
     });
   }
 }
 
-class Observer extends ObserverMediaPlayer{
-  constructor(button) {
-    super()
-    this.button = button;
-  }
-  action(){
-    this.notifyObservers(this)
-  }
-}
-
-export default Observer;
+export default ObserverMediaPlayer;
