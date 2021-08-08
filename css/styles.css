@@ -1144,16 +1144,14 @@ hr{
 }
 
 .song {
-  margin: 70px 0px 70px 0px;
+  margin: 60px 0px 0px 0px;
 }
 
 .info__h3{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  float: right;
+  position: absolute;
 }
 
-.info__h3 h3 + h3{
+.info__h3 h3{
   margin-left: 20px;
 }
 
@@ -1167,6 +1165,7 @@ hr{
   display:flex;
   float: right;
   margin-top: 14px;
+  position: relative;
 }
 
 .save__button{
