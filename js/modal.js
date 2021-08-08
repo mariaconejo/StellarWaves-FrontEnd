@@ -1,5 +1,4 @@
-
-
+// modal
 const modal = document.getElementById('modal__Songs');
 const btnAddSong = document.getElementById('btn-add');
 const close = document.getElementById('close');

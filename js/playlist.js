@@ -1,32 +1,35 @@
 import {
-  upsertRecentSongs, upsertFavSongs, createPlaylistUser, addSongsPlaylist, getPlaylistUser,
+  upsertRecentSongs, upsertFavSongs, createPlaylistUser, artistApi,
 } from './api.js';
-import { userId } from './util.js';
+import {
+  userId, playListParam, songParam, artistPlaylistParam, linkSong,
+} from './util.js';
+
+import controller from './mediaplayer.js';
 
 const title = document.getElementById('title-song');
 const select = document.getElementById('existing__playlist');
-const optionSelect = document.getElementById('option-add');
-const modalForm = document.getElementById('modal-form');
-const inputPlaylist = document.getElementById('input-playlist');
+
+// se crea las playlist se utilizo esta forma que se asemeja a como probamos el backend en postman
 
 async function addRecents() {
-  const musicId = title.dataset.id;
+  const songId = title.dataset.id;
   const recent = {
     userId,
-    listSongs: [musicId],
+    listSongs: [songId],
   };
   const data = await upsertRecentSongs(recent);
-  console.log(data);
+  return data;
 }
 
 async function addFavorites() {
-  const musicId = title.dataset.id;
+  const songId = title.dataset.id;
   const fav = {
     userId,
-    listSongs: [musicId],
+    listSongs: [songId],
   };
   const data = await upsertFavSongs(fav);
-  console.log(data);
+  return data;
 }
 
 async function addPlaylist(value, id) {
@@ -36,48 +39,22 @@ async function addPlaylist(value, id) {
     name: value,
   };
   const data = await createPlaylistUser(playlist);
-  console.log(data);
+
   return data;
 }
 
-function addSong() {
-  const musicId = title.dataset.id;
-  if (select.value !== 'Add to playlist') {
-    const optionSelected = document.querySelector('option:checked');
-    console.log(optionSelected);
-    const add = {
-      listSongs: [musicId],
-    };
-    addSongsPlaylist(add, optionSelected.dataset.id);
-  }
-}
-
-function selectModal() {
-  modalForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (inputPlaylist.value !== '') {
-      const playlist = await addPlaylist(inputPlaylist.value, userId);
-      const option = document.createElement('option');
-      option.innerHTML = playlist.data.name;
-      option.dataset.id = playlist.data._id;
-      optionSelect.after(option);
-      optionSelect.selected = true;
-      console.log(playlist);
+async function selectPlaylist() {
+  if (playListParam === 'artist') {
+    const songsLink = `${linkSong}/${artistPlaylistParam}`;
+    const view = await artistApi(songsLink);
+    for (let i = 0; i < view.length; i++) {
+      if (view[i].id === songParam) {
+        controller(i, view);
+      }
     }
-  });
-}
-async function selectPlaylists() {
-  const allPlaylist = await getPlaylistUser();
-  if (allPlaylist.data.length > 0) {
-    allPlaylist.data.forEach((element) => {
-      const option = document.createElement('option');
-      option.innerHTML = element.name;
-      option.dataset.id = element._id;
-      optionSelect.after(option);
-    });
   }
 }
 
 export {
-  addRecents, addFavorites, addPlaylist, addSong, selectModal, selectPlaylists, select,
+  addRecents, addFavorites, addPlaylist, select, selectPlaylist,
 };

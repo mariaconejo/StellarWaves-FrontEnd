@@ -19,5 +19,6 @@ momento preciso que se realiza un cambio.
 1.Abra su terminal y ejecute el comando npm i para instalar las dependencias  
 2.Para levantar el proyecto ejecute el comando npm run dev  
 3.Con el proyecto ejecutándose de forma correcta, puede disponer de el mismo  
+4.Si desea verlo correrlo en github pages este es el link: 
 ```
 ***

@@ -617,7 +617,9 @@ path:hover {
 .info, .songs {
   display: flex;
   overflow: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-top: 76px;
+  height: 552px; }
 
 .info__artist, .songs__container {
   width: 500px;
@@ -633,9 +635,38 @@ path:hover {
 
 .tabs__item {
   font-family: Righteous;
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
-  margin-top: 23px; }
+  margin-left: 10px;
+  line-height: 140px; }
+
+.artist__image {
+  clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
+  width: 200px;
+  height: 200px; }
+
+.artist__description {
+  font-family: Poppins;
+  font-size: 18px;
+  color: #fff; }
+
+.image_album {
+  clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
+  width: 100px;
+  height: 100px; }
+
+.name__song {
+  font-family: Poppins;
+  font-size: 18px;
+  color: #fff; }
+
+.name__album {
+  font-family: Poppins;
+  font-size: 18px;
+  color: #fff; }
+
+.list__artist--song {
+  list-style: none; }
 
 .user__container--info {
   margin-top: 78px;

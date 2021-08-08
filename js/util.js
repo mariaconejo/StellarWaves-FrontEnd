@@ -1,4 +1,4 @@
-// Tabs
+// URL PARAMETERS
 const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
 const artistParametresUrl = params.get('artistId');

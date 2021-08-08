@@ -4,7 +4,7 @@ const register = document.getElementById('create');
 
 const login = document.getElementById('login');
 
-// const userId = params.get('userId');
+// logeo se utilizo objetos para crear los usuarios muy similar en postman
 
 register.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -18,7 +18,6 @@ register.addEventListener('submit', async (e) => {
   };
   const data = await createUser(users);
   window.location.replace(`home.html?userId=${data.newUser._id}`);
-  console.log(data);
 });
 
 login.addEventListener('submit', async (e) => {

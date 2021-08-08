@@ -1,3 +1,5 @@
+// Clase base de observer se agrego recomendaciones vistas en la clase
+
 class ObserverMediaPlayer {
   constructor(button, event) {
     this.observers = [];

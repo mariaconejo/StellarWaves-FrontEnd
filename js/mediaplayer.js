@@ -1,16 +1,15 @@
 import {
-  playListParam,
-  songParam, artistPlaylistParam, linkSong, home, mediaplayer, artist, profile, userId,
-} from './js/util.js';
-import Canvas from './js/canvas.js';
-import ObserverMediaPlayer from './js/observer.js';
-import { artistApi } from './js/api.js';
+  home, mediaplayer, artist, profile, userId,
+} from './util.js';
+import Canvas from './canvas.js';
+import ObserverMediaPlayer from './observer.js';
+import { artistApi } from './api.js';
 import {
-  addFavorites, addRecents, addSong, selectModal, selectPlaylists, select,
-} from './js/playlist.js';
+  addFavorites, addRecents, select, selectPlaylist,
+} from './playlist.js';
 import {
   modalFunction, btnAddSong,
-} from './js/modal.js';
+} from './modal.js';
 
 const audio = document.querySelector('#audio');
 const musicTitle = document.getElementById('title-song');
@@ -21,7 +20,6 @@ const prevBtn = document.getElementById('btn-prev');
 const nextBtn = document.getElementById('btn-next');
 const favBtn = document.getElementById('btn-fav');
 
-const selectObv = new ObserverMediaPlayer(select, 'change');
 const startObv = new ObserverMediaPlayer(startBtn, 'click');
 const stopObv = new ObserverMediaPlayer(stopBtn, 'click');
 const prevObv = new ObserverMediaPlayer(prevBtn, 'click');
@@ -63,49 +61,35 @@ function mediaplayerPause() {
   audio.pause();
 }
 
-function songPlay(i, array) {
-  let index = i;
-  audio.src = array[index].audio;
-  musicTitle.innerHTML = `You are listening to: ${array[index].name}`;
-  musicTitle.dataset.id = array[index].id;
-  function nextsong() {
-    index++;
-    if (index > array.length - 1) {
-      index = 0;
+// inspirado en este video el codigo de los botenes next y previus https://www.youtube.com/watch?v=QTHRWGn_sJw&t=2094s&ab_channel=TraversyMedia
+
+function controller(i, array) {
+  let song = i;
+  audio.src = array[song].audio;
+  musicTitle.innerHTML = `You are listening to: ${array[song].name}`;
+  musicTitle.dataset.id = array[song].id;
+  function nextSong() {
+    song++;
+    if (song > array.length - 1) {
+      song = 0;
     }
     audio.pause();
-    songPlay(index, array);
+    controller(song, array);
     audio.load();
     audio.play();
   }
-  function prevsong() {
-    index--;
-    if (index < 0) {
-      index = array.length - 1;
+  function prevSong() {
+    song--;
+    if (song < 0) {
+      song = array.length - 1;
     }
-    songPlay(index, array);
+    controller(song, array);
     audio.load();
     audio.play();
   }
-  nextObv.addObserver(nextsong);
-  prevObv.addObserver(prevsong);
+  nextObv.addObserver(nextSong);
+  prevObv.addObserver(prevSong);
 }
-
-async function selectPlaylist() {
-  if (playListParam === 'artist') {
-    const songsLink = `${linkSong}/${artistPlaylistParam}`;
-    console.log(songsLink);
-    const viewSongs = await artistApi(songsLink);
-    console.log(viewSongs);
-    for (let i = 0; i < viewSongs.length; i++) {
-      if (viewSongs[i].id === songParam) {
-        songPlay(i, viewSongs);
-      }
-    }
-  }
-}
-
-selectPlaylists();
 
 window.onload = selectPlaylist();
 startObv.addObserver(mediaplayerPlay);
@@ -114,11 +98,11 @@ startObv.addObserver(addRecents);
 nextObv.addObserver(addRecents);
 prevObv.addObserver(addRecents);
 favObv.addObserver(addFavorites);
-selectObv.addObserver(selectModal);
-selectObv.addObserver(addSong);
 addObv.addObserver(modalFunction);
 
 home.setAttribute('href', `home.html?userId=${userId}`);
 mediaplayer.setAttribute('href', `mediaplayer.html?userId=${userId}`);
 artist.setAttribute('href', `artist.html?userId=${userId}`);
 profile.setAttribute('href', `profile.html?userId=${userId}`);
+
+export default controller;

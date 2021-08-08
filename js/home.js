@@ -1,7 +1,7 @@
 import {
-  linkArtits, userId, home, mediaplayer, artist, profile, listSongInfo, linkSong,
-} from './js/util.js';
-import {artistApi, getUserInfo, getRecentSong}  from './js/api.js';
+  linkArtits, userId, home, mediaplayer, artist, profile, listSongInfo,
+} from './util.js';
+import {artistApi, getUserInfo, getRecentSong}  from './api.js';
 
 const api = await artistApi(linkArtits);
 const nameUser = document.getElementById('name-user');
@@ -22,6 +22,8 @@ function addArtist() {
   }
 }
 addArtist();
+
+// se usa para agregar cancion reciente
 
 async function welcomeUser() {
   const getUser = await getUserInfo();
