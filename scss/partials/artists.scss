@@ -70,7 +70,7 @@
 
 .info__artist, .songs__container{
   width: 500px;
-  margin: 0 auto;
+  margin: 10px 10px 100px 100px;
 }
 
 /* Estado (clases asignadas por Javascript) */
@@ -85,7 +85,9 @@
   display: none;
 }
 
-
+.tab-content-info{
+  width: 700px;
+}
 .tabs__item{
   font-family: Righteous;
   font-size: 18px;
@@ -98,34 +100,63 @@
   clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
   width: 200px;
   height: 200px;
-
+  display: flex;
+  float: left;
 }
 
 .artist__description{
+  display: flex;
+  float: left;
   font-family: Poppins;
   font-size: 18px;
   color: #fff;
-
+  margin-top: 8%;
+  margin-left: 3%;
+  width: 400px;
 }
 
 .image_album{
   clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
   width: 100px;
   height: 100px;
+  float: left;
 }
 
 .name__song{
   font-family: Poppins;
   font-size: 18px;
   color: #fff;
+  float: left ;
+  margin-left: 10%;
+  padding-top: 4%;
 }
 
 .name__album{
   font-family: Poppins;
   font-size: 18px;
   color: #fff;
+  float: left;
+  margin-left: 10%;
+  padding-top: 4%;
 }
 
 .list__artist--song{
   list-style: none;
+  width: 100%;
+
 }
+.list__artist--song li{
+  width: 100%;
+  margin-top: 10px;
+
+}
+a.button__artist{
+  float: right;
+  margin-left: 0%;
+}
+
+.border {
+  border-bottom: 2px solid #FFE4AD;
+}
+
+
