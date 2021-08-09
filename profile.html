@@ -8,7 +8,7 @@
         <meta name="author" content="María Conejo y Jeareth Venegas"/>
         <title>Stellar Waves</title>
         <link rel="stylesheet" href="css/styles.css" type="text/css">
-        <link rel="icon" href="img/logo.png" type="image/gif" sizes="16x16">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700&family=Righteous&display=swap" rel="stylesheet">
     </head>
     <body>
       <div class="wrapper__out">
@@ -69,23 +69,34 @@
                 </button> -->
             </h1>
             <!---->
-            <div class="song clearfix" id="song">
-              <!--portada de album-->
-              <img src="img/portada.png" alt="Portada de album">
-              <div class="info__h3">
-                <!--nombre de la canción-->
-                <h3 class="song__name--profile">One more time</h3>
-                <!--nombre grupo-->
-                <h3 class="artist__name--profile">Discovery</h3>
-              </div>
-              <!--botón de play-->
-              <button id="btn-start"  class="button__background btn-play btn__play--profile" aria-labelledby="button-label">
-                <span id="button-label" hidden>Add Song</span>
-                <svg class="button__active"  aria-hidden="true" focusable="false" width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M38.3288 21.3864C40.8399 14.2682 50.9065 14.2682 53.4175 21.3864L54.8726 25.5111C55.9768 28.6412 58.899 30.7644 62.2171 30.8473L66.5896 30.9565C74.1354 31.145 77.2461 40.7189 71.2523 45.3067L67.7791 47.9651C65.1434 49.9825 64.0272 53.4179 64.9737 56.5992L66.221 60.7914C68.3735 68.0261 60.2294 73.9431 54.014 69.6603L50.4124 67.1786C47.6793 65.2953 44.0671 65.2953 41.334 67.1786L37.7324 69.6603C31.517 73.9431 23.3729 68.0261 25.5254 60.7914L26.7727 56.5992C27.7192 53.4179 26.603 49.9825 23.9673 47.9651L20.4941 45.3067C14.5003 40.7189 17.611 31.145 25.1568 30.9565L29.5292 30.8473C32.8473 30.7644 35.7696 28.6412 36.8738 25.5111L38.3288 21.3864Z" fill="#FFE4AD"/>
-                    <path d="M43.6025 34.7967C41.6055 33.5209 38.9873 34.9551 38.9873 37.3248V52.7681C38.9873 55.1378 41.6055 56.572 43.6025 55.2962L55.6885 47.5745C57.535 46.3949 57.535 43.698 55.6885 42.5184L43.6025 34.7967Z" fill="#119DA4"/>
-                </svg>
-            </button>
+            <div class="list__artist--song song clearfix" id="song">
+              <ul id="artist-name-list" class="list__artist--song">
+                  <li class="clearfix">
+                    <img src="img/portada.png" alt="Portada de album" class="image_album">
+                    <p class="name__song">One more time</p>
+                    <p class="name__album">Discovery</p>
+                    <a class="button__artist" data-id="${valueSong[i].id}" href="mediaplayer.html?playList=artist&&song=${valueSong[i].id}&&artistPlaylist=${valueArtist}&&userId=${userId}">
+                      <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter="url(#filter0_i)">
+                      <path d="M45.4557 21.3864C47.9667 14.2682 58.0333 14.2682 60.5443 21.3864L63.7518 30.4789C64.856 33.6089 67.7783 35.7321 71.0964 35.815L80.735 36.0558C88.2807 36.2443 91.3915 45.8182 85.3976 50.406L77.7414 56.2662C75.1057 58.2836 73.9895 61.7189 74.936 64.9002L77.6855 74.1415C79.838 81.3762 71.6939 87.2932 65.4785 83.0104L57.5392 77.5398C54.8061 75.6565 51.1939 75.6565 48.4608 77.5398L40.5215 83.0104C34.3061 87.2932 26.162 81.3762 28.3145 74.1415L31.064 64.9002C32.0105 61.7189 30.8943 58.2836 28.2586 56.2662L20.6024 50.406C14.6085 45.8182 17.7193 36.2443 25.265 36.0558L34.9036 35.815C38.2217 35.7321 41.144 33.6089 42.2482 30.4789L45.4557 21.3864Z" fill="#FFE4AD"/>
+                      </g>
+                      <path d="M49.6152 39.9486C47.6182 38.6728 45 40.107 45 42.4767V62.19C45 64.5597 47.6182 65.9939 49.6152 64.7181L65.043 54.8614C66.8894 53.6817 66.8894 50.9849 65.043 49.8052L49.6152 39.9486Z" fill="#119DA4"/>
+                      <defs>
+                      <filter id="filter0_i" x="17.4512" y="16.0479" width="74.0984" height="72.4074" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dx="3" dy="4"/>
+                      <feGaussianBlur stdDeviation="2"/>
+                      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0.831373 0 0 0 0 0.745098 0 0 0 0 0.568627 0 0 0 1 0"/>
+                      <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+                      </filter>
+                      </defs>
+                      </svg>
+                    </a>
+                  </li>
+              </ul>
             <!--botón de eliminar-->
             <!-- <button class="delete__button dlt__btn--profile" id="delete__button">
               <img src="img/delete.png" alt="icon del botón de eliminar">

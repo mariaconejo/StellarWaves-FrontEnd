@@ -30,7 +30,7 @@ function tabsInfo() {
     const contentInfo = document.getElementById('artist-name--info');
     const tabs = document.createElement('div');
     tabs.setAttribute('id', `tab-${i}`);
-    tabs.setAttribute('class', 'tab-content-info js-content-hidden ');
+    tabs.setAttribute('class', 'tab-content-info js-content-hidden clearfix');
     contentInfo.appendChild(tabs);
     const html = `
         <img src="${valueArtist[i].image}" alt="${valueArtist.name}" class="artist__image">
@@ -46,18 +46,23 @@ async function songs(valueArtist, contentTabs) {
   const linkSongs = `${linkSong}/${valueArtist}`;
   const valueSong = await artistApi(linkSongs);
   const div = document.createElement('div');
+  div.setAttribute('class', 'div__border')
   const songList = document.createElement('ul');
   songList.setAttribute('class', 'list__artist--song')
+  const title = document.createElement('h2');
+  title.setAttribute('class', 'title__list');
+  title.appendChild(songList);
+  title.innerHTML = `Song`;
   div.appendChild(songList)
   contentTabs.appendChild(div);
   for (let i = 0; i < valueSong.length; i++) {
     const html = `
-    <li>
+    <li class="clearfix border">
       <img src="${valueSong[i].image}" alt="${valueSong[i].name}" class="image_album">
       <p class="name__song">${valueSong[i].name}</p>
       <p class="name__album">${valueSong[i].album}</p>
-      <a data-id="${valueSong[i].id}" href="mediaplayer.html?playList=artist&&song=${valueSong[i].id}&&artistPlaylist=${valueArtist}&&userId=${userId}">
-        <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a class="button__artist" data-id="${valueSong[i].id}" href="mediaplayer.html?playList=artist&&song=${valueSong[i].id}&&artistPlaylist=${valueArtist}&&userId=${userId}">
+        <svg width="90" height="90" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_i)">
         <path d="M45.4557 21.3864C47.9667 14.2682 58.0333 14.2682 60.5443 21.3864L63.7518 30.4789C64.856 33.6089 67.7783 35.7321 71.0964 35.815L80.735 36.0558C88.2807 36.2443 91.3915 45.8182 85.3976 50.406L77.7414 56.2662C75.1057 58.2836 73.9895 61.7189 74.936 64.9002L77.6855 74.1415C79.838 81.3762 71.6939 87.2932 65.4785 83.0104L57.5392 77.5398C54.8061 75.6565 51.1939 75.6565 48.4608 77.5398L40.5215 83.0104C34.3061 87.2932 26.162 81.3762 28.3145 74.1415L31.064 64.9002C32.0105 61.7189 30.8943 58.2836 28.2586 56.2662L20.6024 50.406C14.6085 45.8182 17.7193 36.2443 25.265 36.0558L34.9036 35.815C38.2217 35.7321 41.144 33.6089 42.2482 30.4789L45.4557 21.3864Z" fill="#FFE4AD"/>
         </g>

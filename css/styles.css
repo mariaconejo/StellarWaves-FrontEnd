@@ -623,7 +623,7 @@ path:hover {
 
 .info__artist, .songs__container {
   width: 500px;
-  margin: 0 auto; }
+  margin: 10px 10px 100px 100px; }
 
 /* Estado (clases asignadas por Javascript) */
 .js-active {
@@ -632,6 +632,9 @@ path:hover {
 
 .js-content-hidden {
   display: none; }
+
+.tab-content-info {
+  width: 700px; }
 
 .tabs__item {
   font-family: Righteous;
@@ -643,30 +646,56 @@ path:hover {
 .artist__image {
   clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
   width: 200px;
-  height: 200px; }
+  height: 200px;
+  display: flex;
+  float: left; }
 
 .artist__description {
+  display: flex;
+  float: left;
   font-family: Poppins;
   font-size: 18px;
-  color: #fff; }
+  color: #fff;
+  margin-top: 8%;
+  margin-left: 3%;
+  width: 400px; }
 
 .image_album {
   clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);
   width: 100px;
-  height: 100px; }
+  height: 100px;
+  float: left; }
 
 .name__song {
   font-family: Poppins;
   font-size: 18px;
-  color: #fff; }
+  color: #fff;
+  float: left;
+  margin-left: 10%;
+  padding-top: 4%; }
 
 .name__album {
   font-family: Poppins;
   font-size: 18px;
-  color: #fff; }
+  color: #fff;
+  float: left;
+  margin-left: 10%;
+  padding-top: 4%; }
 
 .list__artist--song {
-  list-style: none; }
+  list-style: none;
+  width: 100%; }
+
+.list__artist--song li {
+  width: 100%;
+  margin-top: 10px; }
+
+a.button__artist {
+  float: right;
+  margin-left: 0%; }
+
+.border {
+  border-bottom: 2px solid #FFE4AD; }
 
 .user__container--info {
   margin-top: 78px;
@@ -691,10 +720,6 @@ path:hover {
   background: none;
   border-radius: 30px;
   border: solid 0px; }
-
-.edit__button {
-  display: flex;
-  float: right; }
 
 .edit__button img {
   text-align: right;
@@ -722,7 +747,8 @@ path:hover {
 
 .default__playlist img {
   display: flex;
-  float: right; }
+  float: right;
+  margin-right: 18px; }
 
 hr {
   color: #FFE4AD;
@@ -735,8 +761,8 @@ hr {
 
 .playlist__name--list a {
   color: #FFE4AD;
-  font-family: 'Righteous', cursive;
-  font-size: 23px;
+  font-family: 'Poppins', cursive;
+  font-size: 18px;
   text-decoration: none; }
 
 .playlist__name--list a {
@@ -746,18 +772,22 @@ hr {
   margin-bottom: 20px; }
 
 .playlist__name--list {
-  list-style: none; }
+  list-style: none;
+  margin-top: 47px;
+  line-height: 52px; }
 
 .playlist__name--list a {
   color: #FFE4AD;
-  font-family: 'Righteous', cursive;
-  font-size: 23px;
+  font-family: 'Poppins', cursive;
+  font-size: 18px;
   margin-left: 35px;
   text-decoration: none; }
 
 .playlist__name--list img {
   height: 30px;
-  width: 30px; }
+  width: 30px;
+  margin-top: 14px;
+  margin-right: 16px; }
 
 .playlist__name--list img {
   display: flex;
@@ -772,7 +802,7 @@ hr {
   margin: 0 auto; }
 
 .songs__profile h1 {
-  color: #FFE4AD;
+  color: #4B3F72;
   font-family: 'Righteous', cursive;
   font-size: 23px; }
 
@@ -808,7 +838,8 @@ hr {
   width: 30px;
   background: none;
   border-radius: 30px;
-  border: solid 0px; }
+  border: solid 0px;
+  margin-right: 10px; }
 
 .save__button img {
   height: 30px;
@@ -839,6 +870,36 @@ hr {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   width: 88px; }
+
+#recent_list {
+  margin-top: 45px;
+  line-height: 40px; }
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #4B3F72; }
+
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: #FFE4AD; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #92CCC4; }
+
+.edit__input {
+  width: 300px;
+  margin-top: 40px;
+  display: inline; }
+
+.edit__input::placeholder {
+  font-family: 'poppins';
+  font-size: 16px;
+  margin-left: 10px; }
+
+.buttons_profile button {
+  margin-left: 12px;
+  display: flex; }
 
 .artist__home {
   clip-path: polygon(50% 0%, 68% 28%, 98% 35%, 75% 58%, 79% 91%, 49% 78%, 21% 91%, 24% 60%, 2% 35%, 31% 28%);

@@ -27,10 +27,7 @@
   border: solid 0px;
 }
 
-.edit__button{
-  display: flex;
-  float:right;
-}
+
 
 .edit__button img{
   text-align: right;
@@ -62,6 +59,7 @@
 .default__playlist img{
   display: flex;
   float:right;
+  margin-right: 18px;
 }
 
 
@@ -73,13 +71,14 @@ hr{
 
 .playlist__name--list ul{
   list-style: none;
-  margin-left: 35px
+  margin-left: 35px;
+
 }
 
 .playlist__name--list a{
   color: #FFE4AD;
-  font-family: 'Righteous', cursive;
-  font-size: 23px;
+  font-family: 'Poppins', cursive;
+  font-size: 18px;
   text-decoration: none;
 }
 .playlist__name--list a{
@@ -91,11 +90,13 @@ hr{
 
 .playlist__name--list{
   list-style: none;
+  margin-top: 47px;
+  line-height: 52px;
 }
 .playlist__name--list a {
   color: #FFE4AD;
-  font-family: 'Righteous', cursive;
-  font-size: 23px;
+  font-family: 'Poppins', cursive;
+  font-size: 18px;
   margin-left: 35px;
   text-decoration: none;
 }
@@ -104,7 +105,10 @@ hr{
 
   height: 30px;
   width: 30px;
+  margin-top: 14px;
+  margin-right: 16px;
 }
+
 
 .playlist__name--list img{
   display: flex;
@@ -122,7 +126,7 @@ hr{
 }
 
 .songs__profile h1{
-  color: #FFE4AD;
+  color: #4B3F72;
   font-family: 'Righteous', cursive;
   font-size: 23px;
 }
@@ -166,6 +170,7 @@ hr{
   background: none;
   border-radius: 30px;
   border: solid 0px;
+  margin-right: 10px;
 }
 
 .save__button img{
@@ -202,4 +207,41 @@ hr{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   width: 88px;
+}
+
+#recent_list{
+  margin-top: 45px;
+  line-height: 40px;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+  background-color: #4B3F72;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 20px;
+  background-color: #FFE4AD;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: #92CCC4;
+}
+
+.edit__input{
+  width: 300px;
+  margin-top: 40px;
+  display: inline;
+}
+
+.edit__input::placeholder{
+  font-family: 'poppins';
+  font-size: 16px;
+  margin-left: 10px;
+
+}
+
+.buttons_profile button{
+  margin-left: 12px;
+  display: flex;
 }
