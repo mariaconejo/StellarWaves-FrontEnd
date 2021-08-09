@@ -413,6 +413,7 @@ label {
   color: #4B3F72; }
 
 .modal__Songs {
+  font-family: "Righteous", cursive;
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -420,19 +421,16 @@ label {
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
-  background-color: #010607;
-  /* Fallback color */
-  background-color: #09171881;
-  /* Black w/ opacity */ }
+  background-color: #232323;
+  background-color: #09171881; }
 
 .modal__content h2 {
+  color: #fff;
   font-size: 36px;
-  text-align: left; }
+  text-align: left;
+  border-radius: 23px; }
 
 .modal__content label {
   color: #E6E6E6;
@@ -454,18 +452,17 @@ label {
 
 /* Modal Content/Box */
 .modal__content {
-  background-color: #11848A;
-  border: 2px solid #F7F1DE;
+  background-color: #1E7B99;
+  border: 2px solid #FFE4AD;
   height: 350px;
   margin: 15% auto;
-  /* 15% from the top and centered */
+  border-radius: 20px;
   padding: 20px;
-  width: 625px;
-  /* Could be more or less, depending on screen size */ }
+  width: 625px; }
 
 /* The Close Button */
-.close {
-  color: #F7F1DE;
+#close {
+  color: #FFE4AD;
   float: right;
   font-size: 28px;
   font-weight: bold; }
@@ -478,11 +475,11 @@ label {
 
 /*general styles*/
 #btn__savePlaylist {
-  background-color: #11848A;
-  border: 2px solid #F7F1DE;
+  background-color: #1E7B99;
+  border: 2px solid #FFE4AD;
   border-radius: 40px;
   box-shadow: 5px 5px #01060742;
-  color: #F7F1DE;
+  color: #FFE4AD;
   height: 40px;
   margin-left: 425px;
   margin-top: 25px;

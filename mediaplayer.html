@@ -45,11 +45,15 @@
                                     <div id="flex">
                                         <span id="close" class="close">&times;</span>
                                         <h2>Add to a list</h2>
-                                        <form  id="modal-form"  method="GET">
-                                          <label>New playlist</label>
-                                          <input type="text" id="input-playlist"  name="addSong" placeholder="New playlist" value="">
-                                          <button id="btn__savePlaylist">Save</button>
-                                        </form>
+                                        <label>New playlist</label>
+                                        <input type="text" placeholder="New playlist">
+                                        <label>Existing playlist</label>
+                                        <select name="Existing playlist" id="existing__playlist">
+                                            <option value="Playlist 1">Playlist 1</option>
+                                            <option value="Playlist 2">Playlist 2</option>
+                                            <option value="Playlist 3">Playlist 3</option>
+                                        </select>
+                                        <input type="submit" value="Save" id="btn__savePlaylist">
                                     </div>
                                 </div>
                             </div>
